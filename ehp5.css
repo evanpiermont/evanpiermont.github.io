@@ -375,3 +375,7 @@ a {
 #wrapfortunes{
     font-size: 80%;
 }
+
+.hl{
+    color:red;
+}
