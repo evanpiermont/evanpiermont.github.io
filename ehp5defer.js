@@ -141,8 +141,8 @@ $currentabs = 'abs1';
 
 var $inscrollpercent = 0; //amount of miniwindow scrolled
 var $trans1 = 70.65; //precentage until change of button and title
-var $trans2 = 183.5;
-var $trans3 = 255;
+var $trans2 = 196.5;
+var $trans3 = 268;
 var $transGoal = 50; // target scroll for scroll on botton click in percentages
 var $transGoalpx = 50; // target scroll for scroll on botton click in px; final usable value
 
@@ -290,6 +290,9 @@ bg[18] = ['url("IMG/CIMG18.jpg")' , "Ponce City Market as viewed from the Beltli
 bg[19] = ['url("IMG/CIMG19.jpg")' , "Tile wall on the fifth floor of a pagoda in Kek Lok Si, Penang, Malaysia; Morning, May 2015 <span class=hideforeground> (Hover to view)<\span>"]
 bg[20] = ['url("IMG/CIMG20.jpg")' , "Foggy Ski Lift on Mount Hermon, Golan Heights, Isreal; Morning, March 2017 <span class=hideforeground> (Hover to view)<\span>"]
 bg[21] = ['url("IMG/CIMG21.jpg")' , "Western edge of Lookout Mountain, Cloudland Canyon, Georgia; Christmas day 2016 <span class=hideforeground> (Hover to view)<\span>"]
+bg[22] = ['url("IMG/CIMG22.jpg")' , "Looking out a giftshop window, Bailey Island, Maine; Midday October 2017 <span class=hideforeground> (Hover to view)<\span>"]
+bg[23] = ['url("IMG/CIMG23.jpg")' , "Hartsfeild Jackson Parking Deck, via MARTA, Atlanta, Georgia; Predawn October 2017 <span class=hideforeground> (Hover to view)<\span>"]
+bg[24] = ['url("IMG/CIMG24.jpg")' , "The top of a small peak, outside Windermere, Northern England; Late Afternoon October 2017 <span class=hideforeground> (Hover to view)<\span>"]
 
 
 
