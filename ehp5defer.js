@@ -293,6 +293,9 @@ bg[21] = ['url("IMG/CIMG21.jpg")' , "Western edge of Lookout Mountain, Cloudland
 bg[22] = ['url("IMG/CIMG22.jpg")' , "Looking out a giftshop window, Bailey Island, Maine; Midday October 2017 <span class=hideforeground> (Hover to view)<\span>"]
 bg[23] = ['url("IMG/CIMG23.jpg")' , "Hartsfeild Jackson Parking Deck, via MARTA, Atlanta, Georgia; Predawn October 2017 <span class=hideforeground> (Hover to view)<\span>"]
 bg[24] = ['url("IMG/CIMG24.jpg")' , "The top of a small peak, outside Windermere, Northern England; Late Afternoon October 2017 <span class=hideforeground> (Hover to view)<\span>"]
+bg[25] = ['url("IMG/CIMG25.jpg")' , "The desert cactus greenhouse, Kew Gardens, London, England; Noontime January 2018 <span class=hideforeground> (Hover to view)<\span>"]
+bg[26] = ['url("IMG/CIMG26.jpg")' , "A rusted iron scupture off the Beltline trail, Atlanta, Georgia; Mid Afternoon February 2018 <span class=hideforeground> (Hover to view)<\span>"]
+bg[27] = ['url("IMG/CIMG27.jpg")' , "Gaztelugatxeko Doniene off the coast of Biscay, Spain; Dusk March 2018 <span class=hideforeground> (Hover to view)<\span>"]
 
 
 
