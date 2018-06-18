@@ -62,7 +62,7 @@
 #container {
     height: 100%;
     top: 0;
-    background: #f5f0f5;
+    background: #f5f0f5
 }
 
 #headfoot {
@@ -103,7 +103,7 @@
     height: 85%;
     left: 5%;
     perspective: 1200px;
-    overflow: hidden;
+    overflow: hidden
 }
 
 #page-cont-inner {
@@ -146,12 +146,12 @@
     left: 5%;
     font-size: 40%;
     text-align: center;
-    border-radius: 15px 15px 15px 0;
+    border-radius: 15px 15px 15px 0
 }
 
 #back,.newabs {
     display: none;
-    border: 3px solid black;
+    border: 3px solid black
 }
 
 .clicked:hover {
@@ -188,6 +188,10 @@
     background-image: url(icon/contact.png)
 }
 
+#musici {
+    background-image: url(icon/music.png)
+}
+
 .backi {
     background-image: url(icon/back.png);
     left: 25%
@@ -195,23 +199,30 @@
 
 #home {
     top: 10%;
-    color: 5786A4;
+    color: 5786A4
 }
 
 #research {
-    top: 30%;
-    color: 51828D;
+    top: 25%;
+    color: 51828D
 }
 
 #teaching {
-    top: 50%;
-    color: 56A4A2;
+    top: 40%;
+    color: 519A87;
 }
 
 #contact {
-    top: 70%;
-    color: 519A87;
+    top: 55%;
+    color: 56A4A2;
+    
 }
+
+#music {
+    top: 70%;
+    color:5DB09A;
+}
+
 
 #back {
     top: 85%;
@@ -250,13 +261,12 @@ a {
 .heading {
     text-align: center;
     color: 51828D;
-    font-size: 120%;
+    font-size: 120%
 }
 
-.border-for-open{
-	display: none;
+.border-for-open {
+    display: none
 }
-
 
 #moretextarrows {
     display: none;
@@ -270,15 +280,14 @@ a {
     z-index: +1
 }
 
-#wrapfortunes{
-    font-size:60%
+#wrapfortunes {
+    font-size: 30%
 }
 
-.hl{
-    color:E870BA
-    }
-    
-.hl2{
-    color:3DA4FF
+.hl {
+    color: E870BA
 }
 
+.hl2 {
+    color: 3DA4FF
+}
