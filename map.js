@@ -1,19 +1,11 @@
 
-//array of data points
-//lat,lang,time,midpointlat,midlang
-placetime = [
-[23.209174, 72.689561,new Date(2018, 1, 1)],
-[51.463161, -0.151170,new Date(2018, 1, 8),44.106204, 42.673316],//londonhome
-[43.208110, -2.918529,new Date(2018, 3, 5),47.396708, -7.099842],
-[51.463161, -0.151170,new Date(2018, 3, 8),46.543675, -5.721130],
-[33.772819, -84.36121,new Date(2018, 3, 21),47.600826, -50.948232],//home
-[51.463161, -0.151170,new Date(2018, 5, 5),54.598230, -50.510201],//londonhome
-[32.696341, 34.942186,new Date(2018, 5, 14),50.755626, 27.043367],
-[48.841881, 2.336053,new Date(2018, 5, 20),39.717285, 14.677288],
-[51.463161, -0.151170,new Date(2018, 5, 23),50.644717, 0.954276],//londonhome
-];
 
 
+var r = 5; //map dot radius
+var timer = 4; //time dot radius
+
+var displayPaths = 'xx';
+var displayTime = 'xx';
 
 window.onresize = function(){  // when window is resized
    background_int();
@@ -22,6 +14,9 @@ window.onresize = function(){  // when window is resized
 window.onload = function(){ //when page loads
    background_int();
    clickDots();
+   createBar();
+   clickTimeDots();
+   d3.selectAll(".line").style('opacity', 0);
    };
 
 
@@ -38,11 +33,11 @@ background_int = function() {
 
 function initMap() {
 
-  center = new google.maps.LatLng(44.721914, 11.751138);
+  center = new google.maps.LatLng(center[0], center[1]);
     var map = new google.maps.Map(
     document.getElementById("map_canvas"), { //init map, basically useless
         center: center,
-        zoom: 3,
+        zoom: zoom,
         disableDefaultUI: true, 
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
@@ -91,7 +86,7 @@ function initMap() {
 
         canvasCont
           .append("circle")
-          .attr("r", 5)
+          .attr("r", r)
           .attr("class", "dot")
           .attr("id", 'loc' + i);
      
@@ -163,40 +158,133 @@ function initMap() {
         };
 
         d3.selectAll(".dot").raise()
+
+        if (displayPaths != 'xx'){
+          DotsRender(displayPaths);
+        };
+        if (displayTime != 'xx'){
+          TimeDotsRender(displayTime);
+        }
   };
 
 
 };
 
-
+//when you click a map dot, you get the lines entering and exiting the dot
 clickDots = function() {
   d3.selectAll(".dot").on("click", function() {
-     d3.selectAll(".dot").style("fill", "steelblue");
-     d3.select(this).style("fill", "red").raise();
+     d3.selectAll(".timedot").attr("r", timer).style("fill", "steelblue"); //reset time dots
+     d3.selectAll(".dot").attr("r", r).style("fill", "steelblue"); //reset map dots
+     d3.select(this).attr("r", r+1).style("fill", "red").raise(); //clicked dot is highlightd
      var id = d3.select(this).attr("id");
-     var x = id.slice(3);
-     displayPaths = []
+     var x = id.slice(3); //get the index from the id 
+     displayPaths = [] //which paths
+     //for each path does it enter or exit the give node
      for (i = 0; i < placetime.length; i++){
-      coords = [placetime[i][0] - placetime[x][0], placetime[i][1] - placetime[x][1]];
+      coords = [placetime[i][0] - placetime[x][0], placetime[i][1] - placetime[x][1]]; 
 
-      if (coords[0]==0 & coords[1]==0){
+      if (coords[0]==0 & coords[1]==0){ //if the latlang is the same
               displayPaths.push(i);
       };
      };
 
-     d3.selectAll(".line").style('opacity', 0);
-     for (i = 0; i < displayPaths.length; i++){
-        console.log(displayPaths[i])
-        d3.selectAll(".templine" + displayPaths[i]).style('opacity', 1);
-        d3.selectAll(".templine" + (displayPaths[i]+1)).style('opacity', 1);
-    };
+     DotsRender(displayPaths)
 
 
 });
 
 };
-  
 
+DotsRender = function(displayPaths) {
+     d3.selectAll(".line").style('opacity', 0);
+     for (i = 0; i < displayPaths.length; i++){
+        d3.select("#time" + displayPaths[i]).attr("r", timer+1).style("fill", "red").raise(); //cooresponding times are highlighted
+        d3.selectAll(".templine" + displayPaths[i]).style('opacity', 1);
+        d3.selectAll(".templine" + (displayPaths[i]+1)).style('opacity', 1);
+    };
+
+};
+
+
+
+createBar = function() {
+
+
+    var lineCont = d3.select('#bar')
+        .append("svg")
+        .attr("id", "barlinecont")
+        .style('top', '0%')
+        .style('left', '0%')
+        .style('width', '100%')
+        .style('height', '100%')
+        .append("svg")
+        .attr("id", "lineSVG")
+        .style('position', 'absolute')
+        .style('top', '0%')
+        .style('left', '0%')
+        .style('width', '100%')
+        .style('height', '100%')
+        .attr('viewBox', "0 0 100 100")
+        .attr('preserveAspectRatio',"none");
+
+        lineCont
+          .append("svg:path")
+          .attr('d', 'M2 50 H 98')
+          .attr("stroke-width", "5")
+          .attr("stroke", "steelblue");
+
+
+    var barCont = d3.select('#barlinecont')
+        .append("svg")
+        .attr("id", "barSVG")
+        .style('width', '100%')
+        .style('height', '100%');
+
+
+  totaltime = (placetime.slice(-1)[0][2].getTime() - placetime[0][2].getTime())
+
+  for (i = 0; i < placetime.length; i++){
+
+    //time precent is the precentange time since begining date. adjusted to fit in 90% and shifted to start at 5
+    time_percent = ((placetime[i][2].getTime() - placetime[0][2].getTime()) * 96 / totaltime) + 2
+
+        barCont
+          .append("circle")
+          .attr("r", timer)
+          .attr("id", 'time' + i)
+          .attr("class", 'timedot')
+          .attr("cx", time_percent + "%")
+          .attr("cy", '50%')
+;
+
+    };
+
+  };
+  
+//when you click a time dot, you get the lines entering and exiting that map dot
+TimeDotsRender = function(x) {
+    x = parseInt(x) //make number
+    d3.select("#loc" + x).attr("r", r+1).style("fill", "red").raise(); //cooresponding map dot is highlighted
+    d3.selectAll(".line").style('opacity', 0);
+    d3.selectAll(".templine" + x).style('opacity', 1);
+    d3.selectAll(".templine" + (x-1)).style('opacity', .5);
+    d3.selectAll(".templine" + (x-2)).style('opacity', .3);
+
+};
+
+clickTimeDots = function() {
+  d3.selectAll(".timedot").on("click", function() {
+      d3.selectAll(".dot").attr("r", r).style("fill", "steelblue"); //reset map dots
+     d3.selectAll(".timedot").attr("r", timer).style("fill", "steelblue"); //reset time dots
+     d3.select(this).attr("r", timer+1).style("fill", "red").raise(); //clicked dot is highlightd
+     var id = d3.select(this).attr("id");
+     var displayTime = id.slice(4); //get the index from the id 
+     displayTime = parseInt(displayTime); //make number
+    TimeDotsRender(displayTime);
+
+});
+
+};
 
 
 
