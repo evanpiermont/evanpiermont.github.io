@@ -173,22 +173,24 @@ function initMap() {
 //when you click a map dot, you get the lines entering and exiting the dot
 clickDots = function() {
   d3.selectAll(".dot").on("click", function() {
-     d3.selectAll(".timedot").attr("r", timer).style("fill", "steelblue"); //reset time dots
-     d3.selectAll(".dot").attr("r", r).style("fill", "steelblue"); //reset map dots
-     d3.select(this).attr("r", r+1).style("fill", "red").raise(); //clicked dot is highlightd
-     var id = d3.select(this).attr("id");
-     var x = id.slice(3); //get the index from the id 
-     displayPaths = [] //which paths
-     //for each path does it enter or exit the give node
-     for (i = 0; i < placetime.length; i++){
+    displayPaths = 'xx';
+    displayTime = 'xx';
+    d3.selectAll(".timedot").attr("r", timer).style("fill", "steelblue"); //reset time dots
+    d3.selectAll(".dot").attr("r", r).style("fill", "steelblue"); //reset map dots
+    d3.select(this).attr("r", r+1).style("fill", "red").raise(); //clicked dot is highlightd
+    var id = d3.select(this).attr("id");
+    var x = id.slice(3); //get the index from the id 
+    displayPaths = [] //which paths
+    //for each path does it enter or exit the give node
+    for (i = 0; i < placetime.length; i++){
       coords = [placetime[i][0] - placetime[x][0], placetime[i][1] - placetime[x][1]]; 
 
       if (coords[0]==0 & coords[1]==0){ //if the latlang is the same
               displayPaths.push(i);
       };
-     };
+    };
 
-     DotsRender(displayPaths)
+    DotsRender(displayPaths)
 
 
 });
@@ -274,12 +276,14 @@ TimeDotsRender = function(x) {
 
 clickTimeDots = function() {
   d3.selectAll(".timedot").on("click", function() {
-      d3.selectAll(".dot").attr("r", r).style("fill", "steelblue"); //reset map dots
-     d3.selectAll(".timedot").attr("r", timer).style("fill", "steelblue"); //reset time dots
-     d3.select(this).attr("r", timer+1).style("fill", "red").raise(); //clicked dot is highlightd
-     var id = d3.select(this).attr("id");
-     var displayTime = id.slice(4); //get the index from the id 
-     displayTime = parseInt(displayTime); //make number
+    displayPaths = 'xx';
+    displayTime = 'xx';
+    d3.selectAll(".dot").attr("r", r).style("fill", "steelblue"); //reset map dots
+    d3.selectAll(".timedot").attr("r", timer).style("fill", "steelblue"); //reset time dots
+    d3.select(this).attr("r", timer+1).style("fill", "red").raise(); //clicked dot is highlightd
+    var id = d3.select(this).attr("id");
+    displayTime = id.slice(4); //get the index from the id 
+    displayTime = parseInt(displayTime); //make number
     TimeDotsRender(displayTime);
 
 });
