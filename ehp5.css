@@ -186,6 +186,7 @@
     background: rgba(0,0,0,.5)
 }
 
+
 .border-for-paper {
     border-bottom: #f0f8ff 1px solid;
     box-shadow: 0 3px 2px -2px #000
@@ -272,8 +273,12 @@
     background-image: url(icon/music.png)
 }
 
+#mapi {
+    background-image: url(icon/map.png)
+}
+
 #home {
-    left: 0
+    left: 5%
 }
 
 #research {
@@ -281,14 +286,18 @@
 }
 
 #teaching {
-    left: 40%
+    left: 35%
 }
 
 #contact {
-    left: 60%
+    left: 50%
 }
 
 #music {
+    left: 65%
+}
+
+#map {
     left: 80%
 }
 
