@@ -273,12 +273,9 @@
     background-image: url(icon/music.png)
 }
 
-#mapi {
-    background-image: url(icon/map.png)
-}
 
 #home {
-    left: 5%
+    left: 0%
 }
 
 #research {
@@ -286,20 +283,17 @@
 }
 
 #teaching {
-    left: 35%
+    left: 40%
 }
 
 #contact {
-    left: 50%
+    left: 60%
 }
 
 #music {
-    left: 65%
-}
-
-#map {
     left: 80%
 }
+
 
 .centertext,.ctx {
     width: 85%;
