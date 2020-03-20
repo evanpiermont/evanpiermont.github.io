@@ -1,0 +1,125 @@
+@font-face {
+    font-family: adelle;
+    src: url(../adelle/adelle_thin-webfont.ttf);
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: adelle;
+    src: url(../adelle/adelle_regular-webfont.ttf);
+    font-weight: 700;
+    font-style: normal
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: adelle;
+    background: lightgray;
+}
+
+input:required {
+    box-shadow:none;
+}
+input:invalid {
+    box-shadow:none;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+#background{
+    width: 100%;
+    height: 20%;
+    position: fixed;
+    background: lightgrey;
+    z-index: 10;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 2px solid #ED8689;
+}
+
+
+.hl{
+    color: #dc322f;
+}
+
+.bold{
+  font-weight: bolder;
+  margin-top: 8px;
+}
+
+
+
+#entertextprompt{
+    width: 70%;
+    height: 15%;
+    top: 2%;
+    left: 15%;
+    text-align: center;
+    position: fixed;
+    font-size: 70%;
+}
+
+#subject_id{
+    width: 38%;
+    height: 7%;
+    top: 10%;
+    right: 35%;
+    text-align: center;
+    position: fixed;
+    font-size: 50%;
+    border-right: 2px solid black;
+}
+
+.submit{
+    position: fixed;
+    border: none;
+    font-size: 50%;
+    cursor: pointer;
+    width: 10%;
+    height: 7%;
+    top:10%;
+    left:65%;
+}
+
+.loginsubmit{
+    top: 35%;
+}
+
+input{
+    position: absolute;
+    border: none;
+    font-size: 50%;
+    background: darkcyan;
+}
+
+#data_page{
+    position: absolute;
+    width: 80%;
+    top: 20%;
+    left: 10%;
+    font-size: 45%;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.bold > span{
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+
+    

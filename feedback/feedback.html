@@ -1,0 +1,50 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="feedback.js"></script>
+<link rel="stylesheet" href="feedback.css" />
+
+
+<script>
+background_int=function(){h=$(window).height(),w=$(window).width(),fs=Math.min(w/2,h),fontSize=.08*fs,$("body").css("font-size",fontSize).css("height",h)},$(document).ready(function(){background_int()});
+</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+</head>
+
+
+
+<title>Feedback</title>
+<body>
+    <div id='background'>
+        
+        
+        <div id='entertextprompt'>Enter a Student ID Number</div>
+
+<form id=idform method='POST' enctype='multipart/form-data' action={{action}}>
+    <input type="text" autocomplete="off" autofocus="autofocus"
+    name="subject_id" id="subject_id">
+    <input type="submit" value="Submit" class="submit" id=submit>
+</form>
+</div>
+
+<div id=data_page>
+<div id="title" class="bold">Project Title: <span id=title_s class=capitalize></span></div>
+<div id="id_nums" class="bold">Student/Candidate IDs: <span id=id_nums_s></span></div>
+<div id="names" class="bold">Names: <span id=names_s class=capitalize></span></div>
+<div id="fb" class="bold">Comments: <span id=fb_s></span></div>
+<div id=error>ERROR: ID not found or entered inccorectly</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
