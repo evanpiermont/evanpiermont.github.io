@@ -115,6 +115,10 @@ input{
     font-weight: normal;
 }
 
+#error{
+    display: none;
+}
+
 
 
 
