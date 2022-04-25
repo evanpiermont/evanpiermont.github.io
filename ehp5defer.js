@@ -141,8 +141,8 @@ $currentabs = 'abs1';
 
 var $inscrollpercent = 0; //amount of miniwindow scrolled
 var $trans1 = 70.65; //precentage until change of button and title
-var $trans2 = 196.5;
-var $trans3 = 268;
+var $trans2 = 209.5;
+var $trans3 = 297.5;
 var $transGoal = 50; // target scroll for scroll on botton click in percentages
 var $transGoalpx = 50; // target scroll for scroll on botton click in px; final usable value
 
