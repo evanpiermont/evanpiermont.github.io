@@ -1,19 +1,13 @@
 
-var $clr1 = '516E9A'
-var $clr2 = '5786A4'
-var $clr3 = '51828D'
-var $clr5 = '56A4A2'
-var $clr4 = '519A87'
-
-
 
 var mq = window.matchMedia('only screen and (max-device-width: 841px)');
 if(mq.matches) { 
 
    background_int = function() {
+
    h = $(window).height();
    w = $(window).width();
-   fontSize = w * .22; 
+   fontSize = Math.min(w * .22, 50); 
    $("body").css('font-size', fontSize).css('height', h);
    $(".bullet:before").css('height', fontSize*.4).css('width', fontSize*.4);
    };
@@ -134,69 +128,44 @@ $(document).ready(function() { //we need to re aqquire the window sizes
 //////////////////    Page Trasitions
 /////////////////
 
-$currentpage = 'home';
 $currenttsp = 'tsp1';
 $currentabs = 'abs1';
 
 
-var $inscrollpercent = 0; //amount of miniwindow scrolled
-var $trans1 = 70.65; //precentage until change of button and title
-var $trans2 = 209.5;
-var $trans3 = 297.5;
-var $transGoal = 50; // target scroll for scroll on botton click in percentages
-var $transGoalpx = 50; // target scroll for scroll on botton click in px; final usable value
-
-var $titlecolor = "black" //color of the title rule
-
-
 $(document).ready(function() { //we need to re aqquire the window sizes
 $("#page-cont-inner").scroll(function() {
-       // document.getElementById("build2").innerHTML = $inscrollpercent; //this line will tell you what the percentages are too target.
-   var $inHeight = $("#page-cont-inner").height();
-   var $outHeight = $("#page-cont").height();
-   var $inscroll = document.getElementById("page-cont-inner").scrollTop;
-   $inscrollpercent = (($inscroll*100)/($outHeight*3));
 
-   $("#background").css("top", -.08*$inscrollpercent + "%")
-   
-   if ($inscrollpercent < $trans1 - 10) {
-      document.getElementById("build2").innerHTML = "Evan Piermont"
-      $('.button').removeClass('clicked');
-      $("#home").addClass('clicked');
-      $titlecolor = $clr1;
-      $(".centertext").css("color", "black")
-      $(".clicked > .centertext").css("color", $titlecolor)
-      
-   }
-   else if ($inscrollpercent < $trans2 - 10) {
-      document.getElementById("build2").innerHTML = "Evan Piermont: <span>Research</span>"
-      $('.button').removeClass('clicked');
-      $("#research").addClass('clicked');
-      $titlecolor = $clr2;
-      $("#build2 > span").css("color", $titlecolor)
-      $(".centertext").css("color", "black")
-      $(".clicked > .centertext").css("color", $titlecolor)
-   }
-   else if ($inscrollpercent < $trans3 - 10) {
-      document.getElementById("build2").innerHTML = "Evan Piermont: <span>Teaching</span>"
-      $('.button').removeClass('clicked');
-      $("#teaching").addClass('clicked');
-      $titlecolor = $clr3;
-      $("#build2 > span").css("color", $titlecolor)
-      $(".centertext").css("color", "black")
-      $(".clicked > .centertext").css("color", $titlecolor) 
-   }
-   else {
-      document.getElementById("build2").innerHTML = "Evan Piermont: <span>Contact</span>"
-      $('.button').removeClass('clicked');
-      $("#contact").addClass('clicked');
-      $titlecolor = $clr4;
-      $("#build2 > span").css("color", $titlecolor)
-      $(".centertext").css("color", "black")
-      $(".clicked > .centertext").css("color", $titlecolor)
-      $('#footer').css('bottom', (Math.min(-(255-($inscrollpercent)),0)) +'%');
 
-   }
+
+
+    let titleText = {
+        'home-page': ['','51828D'],
+        'research-page': [': <span>Research</span>','51828D'],
+        'teaching-page': [': <span>Teaching</span>','5786A4'],
+        'elltwo-page': [': <span>Elltwo // The Partial Order</span>','519A87'],
+        'contact-page': [': <span>Contact</span>','56A4A2'],
+    }
+
+    //console.log(this.scrollTop)
+    let h = window.innerHeight; 
+    let offset = {}
+    let s = this.scrollTop
+    $('.page').each((t,v) => {
+        offset[v.id] = v.offsetTop - 115 //v.offset())
+    })
+
+    let currentpage = null;
+    Object.keys(offset).forEach(function(key) {
+        if (s >= (offset[key] - h/2)){
+            currentpage = key
+        }
+    });
+
+    document.getElementById("build2").innerHTML = 'Evan Piermont' + titleText[currentpage][0];
+    $("#build2 > span").css("color", titleText[currentpage][1])
+    $('.button').css("color", 'unset')
+    $(`#${currentpage.slice(0,-5)}`).css("color", titleText[currentpage][1])
+
 });
 });
 
@@ -206,29 +175,17 @@ function innerscrl($x){
          
 $(document).ready(function() {
         $('.button').click(function() {
-         var $inHeight = $("#page-cont-inner").height();
-         var $outHeight = $("#page-cont").height();
-         var $clickedpg = $(this).attr('id');
-        $('.button').removeClass('clicked');
-        if ($clickedpg=="home") {
-         $transGoal = 0;
-        }
-        if ($clickedpg=="research") {
-         $transGoal = $trans1;
-        }
-         if ($clickedpg=="teaching") {
-         $transGoal = $trans2;
-        }
-         if ($clickedpg=="contact") {
-         $transGoal = $trans3;
-        }
-        $transGoalpx = ($transGoal*.031*$outHeight);
-        
-        $(this).addClass('clicked');
+        let clicked = $(this).attr('id');
+        let goal = $(`#${clicked}-page`)[0].offsetTop - 115        
         $("#page-cont-inner").animate({
-         scrollTop: $transGoalpx + "px"
+         scrollTop: goal + "px"
     }, 700);
         });
+});
+
+$(document).ready(function() {
+    renderElltwo();
+    creatElltwoLinks();
 });
 
 $(document).ready(function() { 

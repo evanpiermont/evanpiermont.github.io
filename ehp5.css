@@ -1,3 +1,7 @@
+:root{
+     --off: 15px;
+}
+
 #background,#container {
     position: fixed;
     top: 0;
@@ -76,7 +80,7 @@
 
 #headfoot {
     width: 100%;
-    height: 15%;
+    height: 100px;
     background: #f5f0f5;
     overflow: hidden;
     opacity: 1;
@@ -85,7 +89,7 @@
 
 #build2 {
     padding-left: 5%;
-    width: 95%;
+    width: 100%;
     height: 100%;
     opacity: 1;
     font-size: 95%;
@@ -99,12 +103,6 @@
     color: red
 }
 
-#secondtab {
-    width: 100%;
-    height: 85%;
-    top: 15%
-}
-
 #page-cont {
     font-size: 40%;
     height: 100%;
@@ -115,15 +113,14 @@
 #page-cont-inner {
     width: 100%;
     overflow-y: auto;
-    overflow-x: hidden;
     height: 100%
 }
 
 .page {
-    position: relative;
-    height: 110%;
+    min-height: calc(100% - 100px - var(--off));
     background: #fcfdfc;
-    box-shadow: 0 2px 5px 0 rgba(10,10,10,1)
+    box-shadow: 0 2px 5px 0 rgba(10,10,10,1);
+    margin-top: calc(100px + var(--off));
 }
 
 #homepic,.icon {
@@ -131,33 +128,18 @@
     border-radius: 50%
 }
 
-#home-page {
-    top: 1%
-}
-
-#research-page {
-    height: 320%;
-    top: 110%
-}
-
-#teaching-page {
-    top: 220%
-}
-
-#contact-page {
-    top: 330%;
-    height: 99%
-}
 
 .page-int-cont {
-    position: absolute;
+    position: relative;
     text-align: justify;
     width: 70%;
-    height: 100%;
-    left: 15%
+    left: 15%;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 #hometext {
+    margin-top: 50px;
     width: 70%
 }
 
@@ -165,7 +147,7 @@
     position: absolute;
     width: 18vw;
     height: 18vw;
-    top: 15%;
+    top: 100px;
     left: 75%;
     background-image: url(IMG/piermont_2.jpg);
     background-size: cover;
@@ -188,15 +170,14 @@
 
 
 .border-for-paper {
-    border-bottom: #f0f8ff 1px solid;
-    box-shadow: 0 3px 2px -2px #000
+    border-bottom: black 1px solid;
+    padding-bottom: 2px;
 }
 
 .border-for-open {
-    border-left: #f0f8ff 1px dotted;
-    padding-left: 10px;
     padding-right: 10px;
-    box-shadow: -2px 0 2px -2px #000
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .paper-open {
@@ -204,14 +185,12 @@
     position: relative;
     left: 40%;
     text-align: right;
-    font-size: 70%;
-    border-bottom: #f0f8ff 1px dotted;
-    box-shadow: 0 2px 2px -2px #000;
-    padding-top: 3px;
-    padding-bottom: 3px
+    font-size: 85%;
+    border-bottom: black 1px solid;
+    line-height: 25px;
 }
 
-#button-holder,.button,.icon,.pdf {
+#button-holder,.icon,.pdf {
     position: absolute
 }
 
@@ -221,8 +200,10 @@
 
 #button-holder {
     width: 100%;
-    height: 30%;
-    bottom: 0
+    height: 60px;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
 }
 
 .button,.icon {
@@ -230,11 +211,11 @@
 }
 
 .button {
-    display: table;
-    height: 20%;
     text-align: left;
-    font-size: 30%;
-    padding-left: 5%
+    font-size: 40%;
+    padding: 20px;
+    white-space: nowrap;
+    margin-left: 15px;
 }
 
 .clicked>.centertext {
@@ -248,9 +229,8 @@
 .icon {
     background-size: contain;
     background-position: center,center;
-    left: 15%;
-    bottom: 0;
-    height: 100%
+    height: 30%;
+    transform: translateX(calc(-50% - 15px))
 }
 
 #homei {
@@ -269,29 +249,13 @@
     background-image: url(icon/contact.png)
 }
 
+#elltwoi {
+    background-image: url(icon/elltwo.png)
+}
+
+
 #musici {
     background-image: url(icon/music.png)
-}
-
-
-#home {
-    left: 0%
-}
-
-#research {
-    left: 20%
-}
-
-#teaching {
-    left: 40%
-}
-
-#contact {
-    left: 60%
-}
-
-#music {
-    left: 80%
 }
 
 
@@ -339,14 +303,11 @@
     border-top: #000 solid 2px
 }
 
-.clipicon,.pdficon {
-    background-position: 2%,50%;
-    background-size: 20px 20px
-}
-
-.absicon,.clipicon,.pdficon {
+.clipicon,.pdficon,.absicon,.ellicon {
+    background-position: 5px,50%;
+    background-size: 15px 15px;
     background-repeat: no-repeat;
-    padding-left: 25px
+    padding-left: 25px;
 }
 
 .abs-page {
@@ -381,8 +342,10 @@ a {
 
 .absicon {
     background-image: url(icon/compass.png);
-    background-position: 3%,50%;
-    background-size: 18px 18px
+}
+
+.ellicon {
+    background-image: url(icon/elltwo.png);
 }
 
 #wrapfortunes {
