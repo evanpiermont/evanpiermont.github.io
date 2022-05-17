@@ -3,6 +3,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="api.js"></script>
+<script type="text/javascript" src="ehp5defer.js"></script>
 <link rel="stylesheet" media="screen and (max-device-width: 800px)" href="ehp5Mmin.css" />
 <link rel="stylesheet" media="screen and (min-device-width: 801px)" href="ehp5.css" />
 <link rel="stylesheet" href="api.css"/>
@@ -25,9 +27,6 @@
 
 </script>
 
-<script>
-background_int=function(){h=$(window).height(),w=$(window).width(),fs=Math.min(w/2,h),fontSize=Math.max(.08*fs,35),$("#background").css("height",h*1.25),$("body").css("font-size",fontSize).css("height",h)},$(document).ready(function(){background_int()});
-</script>
 
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
@@ -492,21 +491,21 @@ risk-neutrality, and hence are more closely aligned with experimental findings. 
 
 <div class=m-hidden id=footer>Photo:</div>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 function downloadJSAtOnload() {
 var element = document.createElement("script");
 var element2 = document.createElement("script");
-element.src = "ehp5defer.js";
-document.body.appendChild(element);
 element2.src = "api.js";
 document.body.appendChild(element2);
+element.src = "ehp5defer.js";
+document.body.appendChild(element);
 }
 if (window.addEventListener)
 window.addEventListener("load", downloadJSAtOnload, false);
 else if (window.attachEvent)
 window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
-</script>
+</script> -->
 
 
 

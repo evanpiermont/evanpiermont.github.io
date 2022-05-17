@@ -86,6 +86,20 @@ if ($pci < $pic + 10) {
 
 } else {
 
+background_int=function(){
+    h=$(window).height(),
+    w=$(window).width(),
+    fs=Math.min(w/2,h),
+    fontSize=Math.max(.08*fs,35),
+    $("#background").css("height",h*1.25),
+    $("body").css("font-size",fontSize).css("height",h)
+},
+
+
+$(document).ready(function() {
+    background_int()
+});
+
 
 ////////////////       The first thing we need to do is bind the action of scrolling to an event in JS
 ///////////////         simple function
@@ -256,12 +270,13 @@ bg[27] = ['url("IMG/CIMG27.jpg")' , "Gaztelugatxeko Doniene off the coast of Bis
 
 
 
-c = bg.length;
+b_len = bg.length;
 $currentBack = 5;
 
 
 function bkgrd() {
-   $currentBack = Math.floor((Math.random()*c)) //chooses a random color between 0 and the length of the color array
+   $currentBack = Math.floor((Math.random()*b_len)) //chooses a random color between 0 and the length of the color array
+   console.log($currentBack, b_len)
    $('#background').css('background-image', bg[$currentBack][0]); //changes color using the css
    document.getElementById("footer").innerHTML = bg[$currentBack][1];
 };
