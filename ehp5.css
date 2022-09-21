@@ -155,7 +155,8 @@
 }
 
 #homepic:hover:after {
-    content: "The \"Hiking Pic\"";
+    content: "arrest this man,\ahe talks in maths";
+    white-space: pre;
     position: absolute;
     width: 18vw;
     height: 60%;
