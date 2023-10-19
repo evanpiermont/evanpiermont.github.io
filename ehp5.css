@@ -271,7 +271,7 @@
     font-size: 200%
 }
 
-#pdfwindow,#tsp2-page,.abs-page,.b-hidden,.gone {
+#pdfwindow,#tsp2-page,.abs-page,.b-hidden,.gone,.absx {
     display: none
 }
 

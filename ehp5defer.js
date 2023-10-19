@@ -204,18 +204,8 @@ $(document).ready(function() {
 
 $(document).ready(function() { 
         $('.newabs').click(function() {
-            w = $(this).attr('id');
-            z = $currentabs;
-         if (w != z) {
-            $currentabs = w;
-         $('#' + w + '-page').show();
-         $('#' + z + '-page').hide();
-         var $outHeight = $("#page-cont").height();
-         $transGoalpx = ($trans1*.031*$outHeight);
-        $("#page-cont-inner").animate({
-         scrollTop: $transGoalpx + "px"
-    }, 200);
-      }
+            w = $(this).parent().parent().find('.absx')
+            w.toggle()
         
    });
    $('.exitabs').click(function() {
