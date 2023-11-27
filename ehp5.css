@@ -149,9 +149,13 @@
     height: 18vw;
     top: 100px;
     left: 75%;
-    background-image: url(IMG/piermont_2.jpg);
     background-size: cover;
     background-position: right,top
+}
+
+#photos{
+    position: fixed;
+    left: 100%;
 }
 
 #homepic:hover:after {
