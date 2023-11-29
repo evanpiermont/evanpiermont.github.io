@@ -279,6 +279,10 @@
     display: none
 }
 
+.absx{
+    margin-top: 10px;
+}
+
 .exit>.centertext {
     visibility: visible
 }
