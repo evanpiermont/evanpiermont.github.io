@@ -1,36 +1,10 @@
 :root{
-     --off: 15px;
-}
-
-#background,#container {
-    position: fixed;
-    top: 0;
-    width: 100%
-}
-
-#arrow:hover,.button:hover,.exit:hover,.newabs:hover,.newtsp:hover,.openpdf:hover {
-    cursor: pointer
-}
-
-#build2,#headfoot,#page-cont,#secondtab {
-    position: absolute
-}
-
-#page-cont,.page {
-    width: 100%;
-    left: 0
-}
-
-#attop,.button {
-    text-transform: uppercase
-}
-
-.cv,.exit {
-    font-weight: 700
-}
-
-#pdfwindow,.exit,.exitpdf {
-    z-index: +5
+    --bg:  #f9f4f4;
+    --bg2: #ffffff;
+    --acc: #f0e4e4 ;
+    --acc2:#851e3e;
+    --font: #451e3e ;
+    --font2: #134074;
 }
 
 @font-face {
@@ -57,318 +31,264 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: adelle
+    font-family: adelle;
 }
 
-#background {
-    height: 10%;
-    background-image: url();
-    background-position: 100%,100%;
-    background-repeat: no-repeat;
-    background-size: cover
+a, a:visited, a:link {
+    text-decoration: none;
+    color: inherit;
 }
 
-#background-shading {
-    position: relative;
+#header{
+    background-color: var(--acc);
+    color: var(--font2);
+    position: fixed;
     width: 100%;
-    height: 100%
-}
-
-#container {
-    height: 100%
-}
-
-#headfoot {
-    width: 100%;
-    height: 100px;
-    background: #f5f0f5;
-    overflow: hidden;
-    opacity: 1;
-    top: 0
-}
-
-#build2 {
-    padding-left: 5%;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    font-size: 95%;
-    color: #000;
     top: 0;
-    box-shadow: 0 1px 3px 0 rgba(10,10,10,1)
+    height: 120px;
+    padding: 15px 0 15px 0;
+    border-bottom: 2px solid var(--font);
+    z-index: 2
 }
 
-#build2>span {
-    font-size: 80%;
-    color: red
+#nav {
+  width: 100%;
+  display: flex;
 }
 
-#page-cont {
-    font-size: 40%;
-    height: 100%;
-    top: 0;
-    overflow: hidden
+#name{
+    text-align: center;
+    letter-spacing: .5rem;
+    font-size: 50px;
 }
 
-#page-cont-inner {
-    width: 100%;
-    overflow-y: auto;
-    height: 100%
+.jumpto {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+/*   border: 1px solid var(--acc); /* Optional: Add a border for visual separation */ */
 }
 
-.page {
-    min-height: calc(100% - 100px - var(--off));
-    background: #fcfdfc;
-    box-shadow: 0 2px 5px 0 rgba(10,10,10,1);
-    margin-top: calc(100px + var(--off));
+.icon{
+    transform: translateY(3px);
+    height: 20px;
+    stroke: var(--acc2);
+    margin-right: 3px;
+}
+#homei,#tunesi,#teacingi,#absi, #suppi, #bibi{
+    fill: var(--acc2);
 }
 
-#homepic,.icon {
-    background-repeat: no-repeat;
-    border-radius: 50%
+#nav_tunes{
+    letter-spacing: .1em
 }
 
 
-.page-int-cont {
-    position: relative;
-    text-align: justify;
-    width: 70%;
-    left: 15%;
-    padding-bottom: 40px;
-    padding-top: 40px;
+#cont{
+    color: var(--font);
+    background-color: var(--bg);
+    padding-top: 1px;
 }
 
-#hometext {
-    margin-top: 50px;
-    width: 70%
+.page{
+    padding: 130px 100px 30px 100px;
+    min-height: calc(100vh - 180px);
 }
 
-#homepic {
-    position: absolute;
-    width: 18vw;
-    height: 18vw;
-    top: 100px;
-    left: 75%;
+
+#home {
+  display: flex;
+}
+
+#left {
+  padding-top: 170px;
+  flex: 2; /* Adjust the ratio to make the left side larger */
+  padding-right: 50px; /* Add padding for better spacing */
+}
+
+#right {
+  padding-top: 150px;
+  flex: 1;
+}
+
+#homepic{
+    width: 200px;
+    height: 200px;
+    background-image: url(IMG/piermont_2.jpg);
     background-size: cover;
-    background-position: right,top
-}
-
-#photos{
-    position: fixed;
-    left: 100%;
-}
-
-#homepic:hover:after {
-    content: "arrest this man,\ahe talks in maths";
-    white-space: pre;
-    position: absolute;
-    width: 18vw;
-    height: 60%;
-    padding-top: 40%;
     border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,.5)
+    
 }
 
-
-.border-for-paper {
-    border-bottom: black 1px solid;
-    padding-bottom: 2px;
-}
-
-.border-for-open {
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.paper-open {
-    width: 60%;
-    position: relative;
-    left: 40%;
-    text-align: right;
-    font-size: 85%;
-    border-bottom: black 1px solid;
-    line-height: 25px;
-}
-
-#button-holder,.icon,.pdf {
-    position: absolute
-}
-
-.bull:before,.ctx:before {
-    content: "\21E4"
-}
-
-#button-holder {
+.sticky_title{
+    font-size: 30px;
     width: 100%;
-    height: 60px;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
+    text-align: center;
+    margin-bottom: 50px;
+    position: sticky; top: 150px;
+    padding: 20px 0px 10px 0px;
+    border-bottom: 1px solid var(--font2);
+    z-index: 1
+
 }
 
-.button,.icon {
-    width: 20%
+#research, #research .sticky_title{
+    background-color: var(--bg2)
 }
 
-.button {
-    text-align: left;
-    font-size: 40%;
-    padding: 20px;
-    white-space: nowrap;
-    margin-left: 15px;
+#contact, #contact .sticky_title{
+    background-color: var(--bg)
 }
 
-.clicked>.centertext {
-    color: 516E9A
-}
-
-#footer,a {
-    color: #000
-}
-
-.icon {
-    background-size: contain;
-    background-position: center,center;
-    height: 30%;
-    transform: translateX(calc(-50% - 15px))
-}
-
-#homei {
-    background-image: url(icon/home.png)
-}
-
-#researchi {
-    background-image: url(icon/light.png)
-}
-
-#teachingi {
-    background-image: url(icon/teaching.png)
-}
-
-#contacti {
-    background-image: url(icon/contact.png)
-}
-
-#elltwoi {
-    background-image: url(icon/elltwo.png)
+.paper{
+    margin-bottom: 25px;
+    font-size: 18px;
+    background-color: var(--bg);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 
-#musici {
-    background-image: url(icon/music.png)
-}
-
-
-.centertext,.ctx {
-    width: 85%;
-    left: 10%;
-    display: table-cell;
-    vertical-align: middle
-}
-
-.ctx {
-    font-size: 200%
-}
-
-#pdfwindow,#tsp2-page,.abs-page,.b-hidden,.gone,.absx {
-    display: none
-}
-
-.absx{
+.paper_buts{
     margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-top: 1px solid;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    border-image: linear-gradient(to right, var(--font) 30%, transparent 10%) 100% 1;
 }
 
-.exit>.centertext {
-    visibility: visible
+.paper_buts .icon{
+    height: 25px;
+    width: 25px;
 }
 
-.pdf {
-    height: 90%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    overflow: scroll
+.paper_buts span, .paper_buts a{
+    cursor: pointer;
+    background-color: var(--bg2);
+    padding: 3px 10px 3px 10px;
+    border-radius: 10px;
+    color: var(--font2);
+    border: 1px solid var(--acc2);
+    margin-right: 20px;
 }
 
-.exit {
-    margin-top: 30px;
-    height: 8%;
-    width: 40%;
-    left: 30%
+.paper_abs_text{
+    display: none;
 }
 
-.exitpdf {
-    margin-top: 0;
-    height: 10%;
-    width: 100%;
-    left: 0;
-    top: 90%;
-    background: #51828d;
-    border-top: #000 solid 2px
+
+.hidden{
+    display: none;
 }
 
-.clipicon,.pdficon,.absicon,.ellicon {
-    background-position: 5px,50%;
-    background-size: 15px 15px;
-    background-repeat: no-repeat;
-    padding-left: 25px;
+a.social{
+    background-color: var(--bg2);
+    padding: 3px 10px 3px 10px;
+    border-radius: 10px;
+    color: var(--font2);
+    border: 1px solid var(--acc2);
+    margin-right: 10px;
 }
 
-.abs-page {
-    font-size: 65%;
-    text-align: justify
+.social .icon{
+    fill: var(--acc2)
 }
 
-a {
-    text-decoration: none
+#socials {
+      display: flex;
+      justify-content: space-around;
+    }
+
+#github{
+    height: 18px;
 }
 
-#footer {
-    position: fixed;
-    bottom: -10%;
-    font-size: 20%;
-    left: 15%;
-    opacity: 1
+#linkedin{
+    stroke: var(--acc2);
 }
 
-.heading {
-    text-align: center;
-    font-size: 130%
-}
+  #flash-message {
+      display: none;
+      position: fixed;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px;
+      border-radius: 5px;
+      background-color: var(--acc);
+      border: 3px solid var(--font2);
+      color: var(--acc2);
+      font-size: 30px;
+      z-index: 10;
+    }
 
-.pdficon {
-    background-image: url(icon/paper.png)
-}
 
-.clipicon {
-    background-image: url(icon/paperclip.png)
+@media only screen and (max-width: 768px) {
+    
+    #name{
+        font-size: 25px;
+    }
+    
+    #right{
+        display: none;
+    }
+    
+    #header{
+        height: 80px;
+    }
+    
+    .sticky_title{
+    position: sticky; 
+    top: 100px;
+    font-size: 20px;
+    }
+        
+    .page{
+    padding: 70px 20px 20px 20px;
+    min-height: calc(100vh - 110px);
+        }
+    
+    
+    .paper{
+    margin-bottom: 25px;
+    font-size: 12px;
 }
-
-.absicon {
-    background-image: url(icon/compass.png);
+    
+   .paper_buts .icon{
+    height: 18px;
+    width: 18px;
 }
-
-.ellicon {
-    background-image: url(icon/elltwo.png);
+    
+  .paper_buts{
+    margin-top: 5px;
+    margin-left: -5px;
+    padding-left: 0px;
+    padding-bottom: 15px;
+    padding-top: 5px;
 }
-
-#wrapfortunes {
-    font-size: 28px;
+    
+    .paper_buts span, .paper_buts a{
+    padding: 3px 7px 3px 2px;
+    border-radius: 10px;
+    color: var(--font2);
+    border: 1px solid var(--acc2);
+    margin-right: 6px;
 }
+    
+    
+    .social{
+        margin-top: 15px;
+        text-align: center;
+        width: 100px;
+    }
+    
+    #socials{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 
-.hl {
-    color: E870BA;
-}
-
-.hl2 {
-    color: 3DA4FF;
-}
-
-.paper-cont{
-    font-size: 80%;
 }

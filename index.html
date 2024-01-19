@@ -1,19 +1,10 @@
 
+<!doctype html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="api.js"></script>
-<script type="text/javascript" src="ehp5defer.js"></script>
-<link rel="stylesheet" media="screen and (max-device-width: 800px)" href="ehp5Mmin.css" />
-<link rel="stylesheet" media="screen and (min-device-width: 801px)" href="ehp5.css" />
-<link rel="stylesheet" href="api.css"/>
-<link rel="stylesheet" href="econ.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
-
-
-
-{% seo %}
+<script type="text/javascript" src="ehp5.js"></script>
+<link rel="stylesheet" href="ehp5.css" />
 
 
 <script>
@@ -33,430 +24,143 @@
 </head>
 
 
-
 <title>Evan Piermont</title>
 <body>
+
+<div id="flash-message"></div>
+
+    <div id="cont">
     
-   
-<div id="background" class"m-hidden">
-</div>
-
-<div id="container">
-        <div id="moretextarrows" class=b-hidden></div>
-        <div class="button b-hidden" id=back> <div class="icon backi"></div> <div class=centertext>Back</div></div>
-        
-        <div id=page-cont>
-
-            <div id=page-cont-inner>
+        <div class="page" id="home">
             
-
-            <div class=page id=home-page>
-                <div class=page-int-cont>
-                <span class=m-hidden><br><br><br></span>
-                <div id=hometext>
+            <div id=left>
                 I am a Senior Lecturer (Associate Professor) in the Department of Economics, Royal Holloway, University of London.
                 <br><br> 
                 I study decision theory and its applications.  
-                <br><br> <a target="_blank" href="pdfs/JMCV.pdf"><b>Curriculum Vitae (PDF)</b></a>
-                </div>
+                <br><br> 
+                <a target="_blank" href="pdfs/JMCV.pdf"><b>Curriculum Vitae (PDF)</b></a>
+            </div>
+            <div id=right>
                 <a target="_blank" href="https://youtu.be/1uYWYWPc9HU?t=31">
-                    <div id="homepic" style='background-image: url("IMG/piermont_2.jpg")'></div>
+                    <div id="homepic"></div>
                 </a>
-                </div>
+           </div>
+
+        </div>
+
+
+        <div class="page" id="research">
+            
+            <div class=sticky_title> Publications </div>
+
+            <div id=pub>
             </div>
 
-            <div class="page" id=research-page>
-                <div class=page-int-cont>
-                
-                 <br><br>                   
-                    <div class=heading>Publications</div> <br>
+            <div class=sticky_title> Working Papers </div>
 
-                    <br>
-
-                <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="https://www.cambridge.org/core/journals/review-of-symbolic-logic/article/algebraic-semantics-for-relative-truth-awareness-and-possibility/C326DBBD8FF57C2807BF70A6723727BE">Algebraic Semantics For Relative Truth, Awareness, And Possibility, 2023, the <em>Review of Symbolic Logic</em></a>
-                    </div>
-                    
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="https://www.cambridge.org/core/journals/review-of-symbolic-logic/article/algebraic-semantics-for-relative-truth-awareness-and-possibility/C326DBBD8FF57C2807BF70A6723727BE"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs8> Abstract </span>
-                        </div>
-                        <div class=absx>This paper puts forth a class of algebraic structures, relativized Boolean algebras (RBAs), that provide semantics for propositional logic in which truth/validity is only defined relative to a local domain. In particular, the join of an event and its complement need not be the top element. Nonetheless, behavior is locally governed by the laws of propositional logic. By further endowing these structures with operators (akin to the theory of modal Algebras) RBAs serve as models of modal logics in which truth is relative. In particular, modal RBAs provide semantics for various well known awareness logics.</div>
-                    </div>
-
-
-                    <br>
-
-                 <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="pdfs/UA_exp.pdf">Unawareness and Risk Taking: The Role of Context, with Felipe A. Araujo, the <em> Journal of Economic Behavior and Organization</em> Volume 208, April 2023, Pages 61-79</a>
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/UA_exp.pdf"> Paper </a></span>
-                            <span class="clipicon border-for-open"> <a target="_blank" href="pdfs/UA_exp_app.pdf"> Supplemental Material </a></span>
-                            <span class="newabs border-for-open absicon" id=abs15> Abstract </span>
-                        </div>
-                        <div class=absx> We study the e ects of exposure to unawareness on risk taking using a novel experimental task, which has solutions that are di cult to find, but easy to verify and so exposes subjects to unawareness in a natural way. We find that exposure to unawareness alone does not a ect risk taking. The role of context, however, is shown to be important. For the treatments inducing unawareness, subjects are more risk averse when the investment decision is framed in the same context as the complex task versus framed in a neutral way; we observe no such di erences for the control treatment. </div>
-
-                    </div>
-
-                    <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="pdfs/REU_ties.pdf">Disentangling Strict and Weak Choice in Random Expected Utility Models, the <em>Journal of Economic Theory</em>. June 2022. Vol 202, Article 105458.</a>  
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/REU_ties.pdf"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs9> Abstract </span>
-                        </div>
-                        <div class=absx> We put forth a model of random choice in which precise choice frequencies of objects are identified only up to the frequency they are chosen by strict maxi- mization. The resulting primitive is a sub-additive capacity (i.e., set function). We provide simple restrictions on this primitive that are both necessary and sufficient for consistency with a random expected utility function. Thus, our model embeds both deterministic choice, regular random expected utility a la Gul and Pesendorfer (2006), and any combination between. We discuss several economic environments where such a primitive could be observed. </div>
-                    </div>
-                    
-                    <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="https://arxiv.org/abs/1907.07019">Unforeseen Evidence, the <em>Journal of Economic Theory</em>. March 2021. Vol 193, Article 105235.</a>  
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="https://arxiv.org/abs/1907.07019"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs12> Abstract </span>
-                        </div>
-                        <div class=absx> I propose a normative updating rule, extended Bayesianism, for the incorporation of probabilistic information arising from the process of becoming more aware. Extended Bayesianism generalizes standard Bayesian updating to allow the posterior to reside on richer probability space than the prior. I then provide an observable criterion on prior and posterior beliefs such that they were consistent with extended Bayesianism. </div>
-                    </div>
-                    <br>
-
-                     <div class="paper-cont">
-                        <div class="border-for-paper">
-                           <a target="_blank" href="https://arxiv.org/abs/2007.02823"> Dynamic Awareness, 2020, with Joe Halpern <em>in the Proceedings of the <br> 17th International Conference on Principles of Knowledge Representation and Reasoning (KR2020)</em></a>
-                            </div>
-                    <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="https://arxiv.org/abs/2007.02823"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs14> Abstract </span>
-                        </div>
-                        <div class=absx>  We investigate how to model the beliefs of an agent who becomes more aware. We use the framework of Halpern and Rego (2013) by adding probability, and define a notion of a model transition that describes constraints on how, if an agent becomes aware of a new formula ϕ in state s of a model M, she transitions to state s∗ in a model M∗. We then discuss how such a model can be applied to information disclosure.  </div>
-                    </div>
-                     <br>
-
-                     <div class="paper-cont">
-                        <div class="border-for-paper">
-                            <a target="_blank" href="pdfs/E&C.pdf">Exploration and Correlation, with Roee Teper, <br>
-                            <em>Games and Economic Behavior</em>, July 2019, Vol 116, p.96-104</a>
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/E&C.pdf"> Paper </a></span>
-                            <span class="clipicon border-for-open"> <a target="_blank" href="pdfs/E&C_APP.pdf"> Supplemental Material </a></span>
-                            <span class="newabs border-for-open absicon" id=abs4> Abstract </span>
-                        </div>
-                        <div class=absx>  In this paper, we study the extent to which contemporaneous correlations across actions affect an agent’s preferences over the different strategies in exploration problems. We show that such correlations carry no economic content and do not affect the agent’s preferences and, in particular, her optimal strategy. We argue that for similar reasons there is an inherent partial identification of the beliefs in exploration problems. Nevertheless, even under the partial identification, we show there are explicit conditions allowing the modeler to test whether the agent is acting according to some Bayesian model. </div>
-                    </div>
-
-                    <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                           <a target="_blank" href="pdfs/Partial_Awareness.pdf"> A Logic for Partial Awareness, 2019, with Joe Halpern <br> <em>in the Proceedings of the Thirty-Third AAAI Conference on Artificial Intelligence</em></a>
-                            </div>
-                    <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/Partial_Awareness.pdf"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs11> Abstract </span>
-                        </div>
-                        <div class=absx> We develop a modal logic to capture partial awareness. The logic has three building blocks: objects, properties, and con- cepts. Properties are unary predicates on objects; concepts are Boolean combinations of properties. An agent can then be partially aware of a concept if she is aware of the concept in the abstract without being aware of the properties that de- fine it. The logic also allows for quantification over objects and properties so that the agent can reason about her own un- awareness. We then apply the logic to contracts. Contracts are syntactic objects that dictate outcomes based on the truth of formulae. The set of feasible contracts is limited by the for- mulae the agents are aware of. We show that when agents are unaware, referencing concepts that agents are only partially aware of can improve welfare.  </div>
-                    </div>
-
-                    <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="pdfs/AGL.Final.pdf">Reference Dependence and Attitudes Towards Uncertainty, <br>
-                            with Juan Sebastian Lleras and Richard Svoboda, <em>Economic Theory</em>, 2018</a>
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/AGL.Final.pdf"> Paper </a></span>
-                            <span class="clipicon border-for-open"> <a target="_blank" href="pdfs/Asymmetric_Gain-Loss Preferences--Auction.pdf"> Supplemental Material </a></span>
-                            <span class="newabs border-for-open absicon" id=abs6> Abstract </span>
-                        </div>
-                        <div class=absx>This paper characterizes a model of reference-dependence, where a state-contingent contract (act) is evaluated by its expected value and its expected gain-loss utility. The expected utility of an act serves as the reference point, hence gains (resp., losses) occur in states where the act provides an outcome that is better (worse) than expected. Beliefs, preferences over outcomes, and a degree of reference-dependence characterize the utility representation, and all are uniquely identified from behavior. Moreover, we establish a link between reference-dependence and attitudes towards uncertainty. In particular, we show within our framework, loss aversion and reference dependence are equivalent to max-min expected utility. Finally, we apply our model to sealed bid auctions where equilibrium bidding strategies are higher bids than risk-neutrality, and hence are more closely aligned with experimental findings.</div>
-                    </div>
-                    
-
-                     <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="pdfs/IU.Final.pdf">Introspective Unawareness and Observable Choice, <br><em>Games and Economic Behavior</em>. November 2017, Vol 106, p.134-152</a>  
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/IU.Final.pdf"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs2> Abstract </span>
-                        </div>
-                        <div class=absx> This paper considers a framework in which the decision makers's (DM) knowledge and awareness are explicitly modeled, as is her ability to reason about her own (un)awareness. The DM has a ranking over consumption alternatives that is informed by her epistemic state (i.e., what she knows and what she is aware of), which can serve as a foundation for well known models. The main result is a characterization, via observable choice, of introspective unawareness --a DM who is both unaware of some information and aware she is unaware. In static environments, or when the DM is blind to her own ignorance, the presence of unawareness does not produce any observable choice patterns. However, under dynamic introspective unawareness, the DM will be unwilling to commit to making future choices, even when given the  exibility to write a contingent plan that executes a choice conditional on the realization of uncertain events. This is a behavior that cannot be explained by uncertainty alone (i.e., without appealing to unawareness). </div>
-                    </div>
-                    <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                            <a target="_blank" href="pdfs/CDB.Final.pdf">Context Dependent Beliefs, <br> 
-                            <em>Journal of Mathematical Economics</em>, August 2017, Vol 71, p.63–73</a>
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/CDB.Final.pdf"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs5> Abstract </span>
-                        </div>
-                        <div class=absx> This paper examines a model where the set of available outcomes from which a decision maker must choose alters his perception of uncertainty. Specifically, this paper proposes a set of axioms such that each menu induces a subjective belief over an objective state-space. The decision maker’s preferences are dependent on the realization of the state. The resulting representation is analogous to state-dependent expected utility within each menu; the beliefs are menu-dependent and the utility index is not. Under the interpretation that a menu acts as an informative signal regarding the true state, the paper examines the behavioral restrictions that coincide with different signal structures: elemental (where each element of a menu is a conditionally independent signal) and partitional (where the induced beliefs form a partition of the state space). </div>
-                    </div>
-                    <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="pdfs/LTC.Final.pdf">Learning the Krepsian State, with Roee Teper and Norio Takeoka, <br> 
-                            <em>Games and Economic Behavior</em>, November 2016, Vol 100, p.69-94 </a>
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/LTC.Final.pdf"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs3> Abstract </span>
-                        </div>
-                        <div class=absx>We take the Krepsian approach to provide a behavioral foundation for a class of responsive subjective learning processes. In contrast to the standard subjective state space models, the resolution of uncertainty regarding the true state is an endogenous process that depends on the decision maker's actions. In addition, there need not be full resolution of uncertainty between periods. When the decision maker chooses what to consume, she also chooses the information structure to which she will be exposed. When she consumes outcomes, she learns her relative preference between them; after each consumption history, the decision maker's information structure is a refinement of the previous information structure. We provide the behavioral restrictions corresponding to an infinite horizon, recursive representation that exhibits such a learning process. Moreover, through the incorporation of dynamics we are able to identify the set of preferences the decision maker believes possible after each history of consumption. That is, we identify the unique subjective state space without appealing to an environment with risk. </div>
-                    </div>
-
-                    <br><br>
-
-                    <div class=heading>Working Papers / R&Rs</div> <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="https://arxiv.org/abs/2304.05142">Eliciting Awareness</a>
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="https://arxiv.org/pdf/2304.05142.pdf"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs19> Abstract </span>
-                        </div>
-                        <div class=absx> This paper examines how a decision maker might incentive an expert, who is more aware than himself, to reveal novel contingencies. The decision maker choice will determine, along with the resolution of uncertainty, the payoffs to both players. I show that the set of achievable outcomes under any (incentive compatible) mechanism is characterized by a small and tractable class of iterated revelation mechanisms (IRMs). An IRM is a dynamic interaction wherein each round the decision maker proposes a plan of action and the expert chooses to reveal some novel contingencies; the IRM ends when nothing novel is revealed and the expert chooses which of the proposals gets implemented. I then consider the set of robust IRMs—those that maximize the worst case outcome across any possible awareness type of the expert—and show these are characterized by a principle of myopic optimality: at each round, the decision maker maximizes his payoff as if the expert had nothing further to reveal. It turns out, the outcomes achievable by any efficient mechanisms are also delineated by the set of robust IRMs.</div>
-                    </div>
-
-
-                    <br>
-
-
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="https://arxiv.org/pdf/2007.07703.pdf">Failures of Contingent Thinking, 2023, joint with Peio Zuazo-Garin</a>
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="https://arxiv.org/pdf/2007.07703.pdf"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs7> Abstract </span>
-                        </div>
-                        <div class=absx> In this paper, we provide a theoretical framework to analyze an agent who misinterprets or misperceives the true decision problem she faces. Within this framework, we show that a wide range of behavior observed in experimental settings manifest as failures to perceive implications, in other words, to properly account for the logical relationships between various payoff relevant contingencies. We present behavioral characterizations corresponding to several benchmarks of logical sophistication and show how it is possible to identify which implications the agent fails to perceive. Thus, our framework delivers both a methodology for assessing an agent's level of contingent thinking and a strategy for identifying her beliefs in the absence full rationality. </div>
-                    </div>
-
-                    <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="pdfs/v.pdf">Vague Preferences and Contracts, 2023</a>
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/v.pdf"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=absV> Abstract </span>
-                        </div>
-                        <div class=absx> In this paper, I examine decision making in an environment where payoff relevant contingencies are vague, that is neither absolutely true nor absolutely false. In this model, an agent values acts that are predicated on linguistic statements, rather than an exogenous state-space. I axiomatize a class of preferences under which agent’s beliefs about the degree of truth of contingencies is identified from her choices. I then apply this model to a simple contracting environment wherein contracts must be explicitly constructed using said linguistic statements. I show that different restrictions on the contract writing technology can impart different outcomes. However, under mild conditions, as the cost of contractual complexity vanishes, so do the distortionary effects of vagueness. </div>
-                    </div>
-                     <br>
-
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="https://arxiv.org/pdf/2106.15979.pdf">Hypothetical Expected Utility, 2022</a>
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="https://arxiv.org/pdf/2106.15979.pdf"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs18> Abstract </span>
-                        </div>
-                        <div class=absx> This paper provides a model to analyze and identify a decision maker’s hypothetical reasoning.  Using this model, I show that a DM’s propensity to engage in hypo-thetical thinking is captured exactly by her ability to recognize implications (i.e., toidentify that one hypothesis implies another) and that this later relation is capturedby a DM’s observable behavior.  Thus, this characterization both provides a concretedefinition of (flawed) hypothetical reasoning and, importantly, yields a methodologyto identify these judgments from standard economic data. </div>
-                    </div>
-                     <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="pdfs/IC.pdf">Image Conscious Preferences, 2022, Revisions requested from the <em>Games and Economic Behavior</em>.</a>
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/IC.pdf"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs13> Abstract </span>
-                        </div>
-                        <div class=absx> An image conscious decision maker (DM) who cares not only about the physical consequences of his actions, but also how his actions are perceived by others. When a DM takes a choice, the resulting image is the set of preferences that are consistent with the observed choice. This paper axiomatizes the behavior of a DM who derives utility directly via consumption and also via the induced image. Because the image depends on what could have been chosen, the DM will display menu-dependent preferences. I consider two models: in the first, the modeler observes two stages of choice—over menus and then from the chosen menu; in the second, only the latter choices are observed. The two models share the same representation but uniqueness is obtained only in the first. </div>
-                    </div>
-                
-
-                    <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="https://arxiv.org/abs/2105.06772">Heterogeneously Perceived Incentives in Dynamic Environments: Rationalization, Robustness and Unique Selections, 2022, joint with Peio Zuazo-Garin</a>  
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="https://arxiv.org/abs/2105.06772"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs17> Abstract </span>
-                        </div>
-                        <div class=absx> In dynamic settings each economic agent's choices can be revealing of her private information. This elicitation via the rationalization of observable behavior depends each agent's perception of which payoff-relevant contingencies other agents persistently deem as impossible. We formalize the potential heterogeneity of these perceptions as disagreements at higher-orders about the set of payoff states of a dynamic game. We find that apparently negligible disagreements greatly affect how agents interpret information and assess the optimality of subsequent behavior: When knowledge of the state space is only 'almost common', strategic uncertainty may be greater when choices are rationalized than when they are not--forward and backward induction predictions, respectively, and while backward induction predictions are robust to small disagreements about the state space, forward induction predictions are not. We also prove that forward induction predictions always admit unique selections a la Weinstein and Yildiz (2007) (also for spaces not satisfying richness) and backward induction predictions do not.  </div>
-                    </div>
-
-                    <br>
-
-                    <div class="paper-cont">
-                        <div class="border-for-paper">
-                        <a target="_blank" href="pdfs/DUaP.pdf"> Distributional Uncertainty and Persuasion, 2020, <br>  Revisions requested from the <em>Economic Theory</em></a> 
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/DUaP.pdf"> Paper </a></span>
-                            <span class="newabs border-for-open absicon" id=abs16> Abstract </span>
-                        </div>
-                        <div class=absx> A Sender designs a signals regarding a state. The distribution of the state is unknown to a Receiver. When information is disclosed many times, accu- mulated signals change the Receiver’s belief about the distribution. Under mild conditions, the Sender’s private information about the distribution is never fully revealed. I then consider the effect of public commitment to a signal structure. Commitment mechanisms need to be unconditional in order to ensure private information revelation. Hence, my analysis in- dicates that the metrics by which policy changes are evaluated should be committed to before any preliminary investigation.  </div>
-                    </div>                    
-
-
-
-                </div>
-
-                </div>
-
-
-            <div class=page id=teaching-page>
-                <div class=page-int-cont>
-                <span class=m-hidden><br><br><br><br></span>
-
-                <div class="paper-cont">
-                        <div class="border-for-paper">
-                            EC5110 Microeconomics
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/EC5110/EC5110-18.pdf"> Syllabus </a></span>
-                        </div>
-                        <div class="paper-open">
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/EC5110/Lecture1.pdf"> Lecture 0 </a></span>
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/EC5110/Lecture2.pdf"> 1 </a></span>
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/EC5110/Lecture3.pdf"> 2 </a></span>
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/EC5110/Lecture4.pdf"> 3 </a></span>
-                            <span class="pdficon border-for-open"> <a target="_blank" href="pdfs/EC5110/Lecture5.pdf"> 4 </a></span>
-                        </div>
-                 </div>
-
-                  <br><br>
-
-                <div class="paper-cont">
-                        <div class="border-for-paper">
-                            EC2501 Microeconomics
-                            <span class="b-hidden"> <a target="_blank" href="https://lectures.thepartialorder.io/r/overview"> <br> Elltwo Lecture Notes </a></span>
-                        </div>
-                        <div class="paper-open">
-                            <span class="ellicon border-for-open"> <a target="_blank" href="https://lectures.thepartialorder.io/r/overview">Elltwo Lecture Notes </a></span>
-                        </div>
-                 </div>
-
-            </div>
+            <div id=wp>
             </div>
 
-            <div class=page id=elltwo-page>
-                <div class=page-int-cont>
 
 
-                        <div class=heading> Elltwo </div>
-
-                        <br>
-
-                        <a href='https://elltwo.io'>Elltwo</a> is a browser based platform for decentralized and collaborative technical documents, such as textbooks, reference wikis, and lecture notes. Elltwo articles are written in a simple markup language borrowing elements of Markdown and LaTeX. For example, the following code
-
-                        <div class=elltwo base="https://thepartialorder.io" art="howto" key="code"></div>
-
-                        would render as:
-
-                        <div class=elltwo base="https://thepartialorder.io" art="howto" key="eq_geo"></div>
-
-                        <br><br>
-
-                        Elltwo has a wiki like structure with an emphasis on typesetting and intelligent referencing. Links and references are constucted automatically, update to propogate changes, and persist across the entire network of articles, indeed, even on <em>other</em> website: for example, <span class=elltwo_popup base="https://thepartialorder.io" art="independence" key="Independence">hover on this link</span>.
-
-                        <br>
-                        <br>
-
-                        <div class=heading> The Partial Order </div>
-
-                        <br>
-                        <br>
-
-                        <a href='https://thepartialorder.io'>The Partial Order</a> is a decsion theory reference wiki built using elltwo. It is indended to serve as decentralized reference for decision theoretic axioms and representations. Click on the definition below and explore <em>the partial order</em>.  
-
-                        <div class=elltwo base="https://thepartialorder.io" art="expected_utility" key="def_eu"></div>
+        </div>
 
 
-                </div>
-            </div>
+<!--         <div class="page" id="teaching">
 
-            <div class=page id=contact-page>
-                <div class=page-int-cont>
-                    <span class=m-hidden><br><br></span><br><br>
-                        <b>Electronic Mail</b>: <a href="mailto:evan.piermont@rhul.ac.uk" target="_top">evan.piermont@rhul.ac.uk</a>
-                    <br><br>
-                        <b>Office</b>:  317 Horton, Department of Economics 
+             <div class=sticky_title> Teaching </div>
+
+            
+        </div> -->
+
+
+        <div class="page" id="contact">
+            <div class=sticky_title> Contact </div>
+
+            <div id=contact_inner>
+                <b>Electronic Mail</b>: <a href="mailto:evan.piermont@rhul.ac.uk" target="_top">evan.piermont@rhul.ac.uk</a>
+                    <br><br><br>
+
+                <b>Office</b>:  317 Horton, Department of Economics 
                       <br> Royal Holloway, University of London,
                       <br> Egham Hill, Egham TW20 0EX
-                </div>
-            </div>
-        </div>
-    </div>
+                <br><br>
+                <br><br>
 
+<div id=socials>
+                <a class="social" href='https://github.com/evanpiermont'> <svg id="github" class=icon viewBox="0 0 100 100"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" /></svg>github</a>
 
+                <a class="social" href='https://elltwo.io/'> <svg id="elltwo" class=icon viewBox="0 0 100 100">
+<!-- <rect x="3" y="3" width="94" height="94" stroke-width="5" rx="20"/> -->
+<path d="m 9.4218863,59.902825 0.435296,2.938248 c 2.6117757,-0.435296 5.7676717,-1.08824 9.0323917,-1.850008 -1.741184,5.005903 -3.047072,9.794159 -3.047072,13.820647 0,10.991224 6.094144,13.276528 11.42652,13.276528 7.944152,0 13.494176,-6.202968 22.200095,-19.914792 L 46.857341,66.32344 c -8.161799,11.861816 -12.623583,17.41184 -18.064783,17.41184 -3.591192,0 -5.332376,-3.591192 -5.332376,-7.291208 0,-5.550024 1.958832,-11.644167 4.461784,-18.064783 16.758895,-5.332376 34.932503,-15.23536 34.932503,-33.626616 0,-6.529439 -3.26472,-10.664751 -9.576512,-10.664751 -13.385351,0 -25.355991,22.961863 -33.082495,43.311951 -3.80884,1.08824 -7.508856,1.850008 -10.7735757,2.502952 z M 52.516189,18.985002 c 2.7206,0 5.114728,1.63236 5.114728,6.855911 0,14.582416 -13.602999,23.39716 -28.076591,28.620712 l 2.7206,-6.747088 c 3.155896,-7.944152 11.42652,-28.729535 20.241263,-28.729535 z" />
+<path d="M 88.247881,37.470562 H 86.78167 c -1.162857,3.03354 -1.820124,4.095279 -4.499751,4.095279 h -7.027701 l -3.53913,0.151677 v -0.252795 l 6.673788,-6.319875 c 5.359254,-5.409813 8.241117,-8.898384 8.241117,-13.398135 0,-5.308695 -3.994161,-8.746706 -9.707328,-8.746706 -4.904223,0 -8.342235,2.831303 -9.909564,7.735526 l 1.213416,0.50559 c 1.870683,-3.791925 4.095279,-4.954782 7.381614,-4.954782 3.893043,0 6.319875,2.426832 6.319875,6.218757 0,5.308695 -2.52795,8.493912 -7.533291,13.65093 l -7.684968,7.684967 v 1.719006 h 19.920246 z" />
+</svg></svg>elltwo</a>
+
+<a class="social" href='https://scholar.google.com/citations?user=-qZ2R24AAAAJ&hl=en'> <svg id="scholar" class=icon viewBox="0 0 412 452"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M213 111l-107 94h69c5 45 41 64 78 67-7 18-4 27 7 39-43 1-103 26-103 67 4 45 63 54 92 54 38 1 81-19 90-54 4-35-10-54-31-71-23-18-28-28-21-40 15-17 35-27 39-51 2-17-2-28-6-43l45-38-1 16c-3 2-5 6-5 9v103c2 13 22 11 23 0V160c0-3-2-7-5-8v-25l16-16zm58 141c-61 10-87-87-38-99 56-11 83 86 38 99zm-5 73c60 13 61 63 10 78-44 9-82-4-81-30 0-25 35-48 71-48z"></path></g></svg>
+</svg></svg>scholar</a>
+
+<a class="social" href='www.linkedin.com/in/evan-piermont-09bb5622a'> <svg id="linkedin" class=icon viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"/></svg>
+</svg></svg>linked in</a>
 </div>
 
-    <div id="headfoot">
-            <div id="attop">
-                <div id="build2">Evan Piermont </div>
-            </div>
-                  <div id=button-holder>
-                <div class="button clicked" id=home> <div class=icon id=homei></div> <div class=centertext> About</div></div>
-                <div class=button id=research> <div class=icon id=researchi></div> <div class=centertext> Research</div></div>
-                <div class=button id=teaching> <div class=icon id=teachingi></div> <div class=centertext>Teaching</div></div>
-                <div class=button id=elltwo> <div class=icon id=elltwoi></div> <div class=centertext>elltwo</div></div>
-                <div class=button id=contact> <div class=icon id=contacti></div> <div class=centertext>Contact</div></div>
-                <a href="tunes.html"><div class=button id=music> <div class=icon id=musici></div> <div class=centertext>Top 10</div></div></a>
-                <!-- <a href="map.html"><div class=button id=map> <div class=icon id=mapi></div> <div class=centertext>Map</div></div></a> -->
+                </div>
+
+            
+        </div>
+    
+
+    </div>
+
+
+    <div id="header">
+        <div id="name">Evan Piermont </div>
+        <div id="nav">
+            <a href="#home" class="jumpto" id=nav_home>
+                <svg id="homei" class=icon viewBox="0 0 512 512"><g stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g> <path class="st0" d="M498.211,423.825L382.399,308.004l-11.347,11.367l-19.634-19.674c21.876-32.374,32.881-69.984,32.852-107.535 c0.029-49.182-18.727-98.489-56.239-135.972C290.617,18.717,241.309-0.029,192.109,0c-49.142-0.029-98.45,18.756-135.884,56.19 C18.761,93.673-0.025,142.932,0.005,192.133c-0.029,49.181,18.756,98.469,56.19,135.913 c37.493,37.483,86.772,56.239,135.933,56.239c37.561,0,75.2-11.026,107.585-32.852l19.642,19.642l-11.327,11.299l115.811,115.822 C432.954,507.36,445.101,512,457.112,512c11.961,0,24.108-4.64,33.252-13.804l7.847-7.837c9.135-9.135,13.765-21.282,13.785-33.292 C511.995,445.097,507.346,432.969,498.211,423.825z M192.128,358.452c-42.669,0-85.231-16.183-117.683-48.674 c-32.443-32.433-48.646-74.975-48.646-117.644c0-42.679,16.222-85.231,48.664-117.674c32.453-32.443,74.995-48.664,117.645-48.664 c42.679,0,85.24,16.202,117.683,48.664c32.463,32.443,48.656,74.995,48.674,117.674c-0.019,42.669-16.211,85.211-48.654,117.644 C277.349,342.269,234.788,358.452,192.128,358.452z M316.957,338.234c3.772-3.226,7.516-6.58,11.123-10.158 c3.587-3.588,6.912-7.331,10.167-11.132l17.606,17.625l-21.28,21.29L316.957,338.234z M479.943,472.109l-7.818,7.818 c-4.193,4.183-9.544,6.191-15.033,6.23c-5.478,0-10.821-2.048-15.012-6.2l-97.554-97.563l37.874-37.854l97.543,97.544 c4.182,4.202,6.2,9.534,6.2,14.984C486.143,462.566,484.105,467.928,479.943,472.109z"></path> <path class="st0" d="M277.467,106.765c-23.504-23.494-54.475-35.29-85.339-35.27c-30.844,0-61.815,11.776-85.348,35.27 c-23.504,23.523-35.299,54.504-35.27,85.368c-0.029,30.854,11.766,61.844,35.27,85.299c23.533,23.542,54.504,35.328,85.329,35.328 c30.864,0,61.834-11.786,85.358-35.309c23.533-23.522,35.299-54.464,35.299-85.318C312.795,161.27,300.999,130.318,277.467,106.765 z M262.249,262.234c-19.341,19.341-44.676,29.021-70.14,28.992c-25.434,0-50.77-9.651-70.112-28.992 c-19.331-19.331-28.962-44.648-28.962-70.101c0-25.444,9.631-50.781,28.962-70.141c19.371-19.331,44.678-28.973,70.131-29.002 c25.444,0.029,50.78,9.7,70.121,29.002c19.332,19.36,28.973,44.697,28.992,70.141C291.241,217.586,281.599,242.903,262.249,262.234 z"></path> </g> </g></svg>
+                </svg><br>
+            About</a>
+            <a href="#research" class="jumpto" id=nav_research>
+                <svg id="researchi" class=icon viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.505 22H5.495C5.225 22 4.995 21.78 4.995 21.5V3.5C4.995 3.23 5.215 3 5.495 3H18.505C18.775 3 19.005 3.22 19.005 3.5V21.51C18.995 21.78 18.775 22 18.505 22Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12.995 19H15.995"stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7.995 10H14.995"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7.995 12H14.995"  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7.995 8H15.995" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7.995 6H15.995" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7.995 14H13.425" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+            </svg><br>
+            Research</a>
+            <!-- <a href="#teaching" class="jumpto" id=nav_teaching>
+                <svg id="teacingi" class=icon fill="none" viewBox="0 0 418.088 418.088" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_718_" d="M267.539,225.169c-25.875,5.066-40.173,3.353-46.353-5.554c-7.97-11.485,2.206-28.049,12.046-44.067 c3.813-6.207,9.972-16.231,10.673-20.455c-5.316-0.803-20.918,1.309-30.548,2.613c-29.523,4-45.133,5.612-49.392-4.576 c-3.471-8.299,4.406-16.63,17.3-26.586c26.606-20.544,28.63-28.606,28.771-29.961c-1.128-0.79-8.93-4.913-41.283,1.495 c-22.746,4.503-50.321,12.902-73.764,22.466c-3.584,1.462-7.666-0.258-9.126-3.837c-1.46-3.58,0.258-7.666,3.837-9.126 c24.997-10.198,54.239-19.021,78.223-23.604c41.252-7.882,50.776-0.541,54.351,5.667c6.319,10.975-3.689,25.772-32.452,47.982 c-5.523,4.265-8.661,7.217-10.438,9.157c7.481,0.386,22.431-1.642,32.094-2.95c22.618-3.063,34.715-4.47,40.981-0.312 c4.107,2.727,8.027,8.404,3.372,19.975c-2.343,5.824-6.388,12.408-10.67,19.38c-4.115,6.698-8.37,13.624-10.833,19.527 c-2.229,5.346-2.277,8.313-1.641,9.23c0.151,0.22,4.05,5.3,32.159-0.203c18.665-3.659,31.043-2.721,37.837,2.871 c3.61,2.971,5.519,7.107,5.519,11.963c0,3.866-3.134,7-7,7s-7-3.134-7-7c0-0.812-0.184-0.963-0.415-1.153 C293.277,224.69,288.201,221.12,267.539,225.169z M351.712,294.42c-3.866,0-7,3.134-7,7s3.134,7,7,7h23.866c3.866,0,7-3.134,7-7 V40.901c0-3.866-3.134-7-7-7H42.508c-3.866,0-7,3.134-7,7V301.42c0,3.866,3.134,7,7,7h206.185c3.866,0,7-3.134,7-7s-3.134-7-7-7 H49.508V47.901h319.07V294.42H351.712z M332.457,279.287v121.937c0,9.299-7.565,16.864-16.865,16.864h-30.781 c-9.3,0-16.865-7.565-16.865-16.864V279.287c0-14.74,11.991-26.731,26.731-26.731h11.051 C320.466,252.556,332.457,264.547,332.457,279.287z M318.457,279.287c0-7.021-5.711-12.731-12.729-12.731h-11.051 c-7.021,0-12.731,5.711-12.731,12.731v121.937c0,1.553,1.313,2.864,2.865,2.864h30.781c1.553,0,2.865-1.312,2.865-2.864V279.287z M411.088,0H7C3.134,0,0,3.134,0,7v328.322c0,3.866,3.134,7,7,7h241.692c3.866,0,7-3.134,7-7s-3.134-7-7-7H14V14h390.088v314.322 h-52.376c-3.866,0-7,3.134-7,7s3.134,7,7,7h59.376c3.866,0,7-3.134,7-7V7C418.088,3.134,414.954,0,411.088,0z"></path> </g></svg>
+                </svg> <br>
+            Teaching</a> -->
+            <a href="#contact" class="jumpto" id=nav_contact>
+                <svg id="contacti" class=icon viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M20.6067 8.26229L15.5499 11.6335C14.2669 12.4888 13.6254 12.9165 12.932 13.0827C12.3192 13.2295 11.6804 13.2295 11.0677 13.0827C10.3743 12.9165 9.73279 12.4888 8.44975 11.6335L3.14746 8.09863M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z"  stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg><br>
+                </svg>Contact
+            </a>
+
+            <a href="/tunes" class="jumpto" id=nav_tunes>
+                <svg id="tunesi" class=icon viewBox="-23.25 -23.25 511.50 511.50" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M396.94,68.06C353.052,24.171,294.652,0,232.5,0S111.948,24.171,68.06,68.06C24.171,111.949,0,170.348,0,232.5 s24.171,120.551,68.06,164.44C111.948,440.829,170.348,465,232.5,465s120.552-24.171,164.44-68.06 C440.829,353.051,465,294.652,465,232.5S440.829,111.949,396.94,68.06z M232.5,450C112.57,450,15,352.43,15,232.5 S112.57,15,232.5,15S450,112.57,450,232.5S352.43,450,232.5,450z"></path> <path d="M232.5,412.5c-99.252,0-180-80.748-180-180c0-4.142-3.357-7.5-7.5-7.5s-7.5,3.358-7.5,7.5 c0,52.127,20.272,101.107,57.083,137.917c36.81,36.81,85.79,57.083,137.917,57.083c4.143,0,7.5-3.358,7.5-7.5 S236.643,412.5,232.5,412.5z"></path> <path d="M232.5,52.5c42.792,0,84.245,15.24,116.722,42.912c1.412,1.203,3.141,1.792,4.86,1.792c2.121,0,4.229-0.895,5.713-2.636 c2.687-3.153,2.308-7.887-0.845-10.573C323.762,54.012,278.854,37.5,232.5,37.5c-4.143,0-7.5,3.358-7.5,7.5 S228.357,52.5,232.5,52.5z"></path> <path d="M381.008,106.053c-2.687-3.153-7.42-3.531-10.573-0.845c-3.152,2.687-3.531,7.42-0.845,10.573 c27.671,32.477,42.91,73.928,42.91,116.719c0,4.142,3.357,7.5,7.5,7.5s7.5-3.358,7.5-7.5 C427.5,186.147,410.988,141.241,381.008,106.053z"></path> <path d="M232.5,75c-4.143,0-7.5,3.358-7.5,7.5s3.357,7.5,7.5,7.5C311.075,90,375,153.925,375,232.5c0,4.142,3.357,7.5,7.5,7.5 s7.5-3.358,7.5-7.5c0-42.103-16.374-81.663-46.105-111.395S274.603,75,232.5,75z"></path> <path d="M163.958,374.368c1.052,0.508,2.164,0.75,3.26,0.75c2.786,0,5.463-1.56,6.757-4.237c1.804-3.729,0.242-8.214-3.487-10.017 C120.841,336.86,90,287.675,90,232.5c0-4.142-3.357-7.5-7.5-7.5s-7.5,3.358-7.5,7.5c0,30.195,8.553,59.525,24.732,84.819 C115.482,341.941,137.691,361.668,163.958,374.368z"></path> <path d="M232.5,375c-11.938,0-23.799-1.474-35.25-4.382c-4.012-1.02-8.096,1.409-9.115,5.424s1.409,8.096,5.424,9.115 C206.216,388.371,219.317,390,232.5,390c4.143,0,7.5-3.358,7.5-7.5S236.643,375,232.5,375z"></path> <path d="M232.5,337.5c-29.979,0-58.59-12.839-78.499-35.224c-2.754-3.094-7.493-3.373-10.589-0.62 c-3.095,2.752-3.373,7.493-0.62,10.588c22.753,25.583,55.45,40.255,89.708,40.255c4.143,0,7.5-3.358,7.5-7.5 S236.643,337.5,232.5,337.5z"></path> <path d="M131.624,289.889c1.117,0,2.252-0.25,3.321-0.78c3.712-1.837,5.232-6.336,3.395-10.048 c-7.192-14.534-10.84-30.199-10.84-46.561c0-4.142-3.357-7.5-7.5-7.5s-7.5,3.358-7.5,7.5c0,18.69,4.171,36.594,12.396,53.214 C126.204,288.357,128.861,289.889,131.624,289.889z"></path> <path d="M232.5,112.5c-4.143,0-7.5,3.358-7.5,7.5s3.357,7.5,7.5,7.5c57.897,0,105,47.103,105,105c0,4.142,3.357,7.5,7.5,7.5 s7.5-3.358,7.5-7.5C352.5,166.332,298.668,112.5,232.5,112.5z"></path> <path d="M232.5,212.5c-11.028,0-20,8.972-20,20s8.972,20,20,20s20-8.972,20-20S243.528,212.5,232.5,212.5z M232.5,237.5 c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S235.257,237.5,232.5,237.5z"></path> <path d="M232.5,149.5c-45.767,0-83,37.234-83,83s37.233,83,83,83s83-37.234,83-83S278.267,149.5,232.5,149.5z M232.5,300.5 c-37.495,0-68-30.505-68-68s30.505-68,68-68s68,30.505,68,68S269.995,300.5,232.5,300.5z"></path> </g> </g></svg><br>AOTY
+            </a>
         </div>
     </div>
+
+
+
 
     
 
-
-
-
-
-
-<div class=m-hidden id=footer>Photo:
-</div>
-<div id=photos>
+<div id=photos class=hidden >
     <img src="IMG/evan_piermont.jpeg" alt="Dr Evan Piermont" /> 
     <img src="IMG/evan_piermont2.jpeg" alt="Evan Piermont, Phd" /> 
     <img src="IMG/piermont_2.jpg" alt="Dr Evan Piermont" /> 
+
+    <svg id=absi viewBox="0 0 30 23" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="Path_190" data-name="Path 190" d="M16,1A15,15,0,1,0,31,16,15.007,15.007,0,0,0,16,1Zm0,2A13,13,0,1,1,3,16,13.006,13.006,0,0,1,16,3Z" transform="translate(-1 -1)" fill-rule="evenodd"></path> <path id="Path_191" data-name="Path 191" d="M15,2V4a1,1,0,0,0,2,0V2a1,1,0,0,0-2,0Z" transform="translate(-1 -1)" fill-rule="evenodd"></path> <path id="Path_192" data-name="Path 192" d="M17,30V28a1,1,0,0,0-2,0v2a1,1,0,0,0,2,0Z" transform="translate(-1 -1)" fill-rule="evenodd"></path> <path id="Path_193" data-name="Path 193" d="M30,15H28a1,1,0,0,0,0,2h2a1,1,0,0,0,0-2Z" transform="translate(-1 -1)" fill-rule="evenodd"></path> <path id="Path_194" data-name="Path 194" d="M4,15H2a1,1,0,0,0,0,2H4a1,1,0,0,0,0-2Z" transform="translate(-1 -1)" fill-rule="evenodd"></path> <path id="Path_195" data-name="Path 195" d="M23.633,9.686a1,1,0,0,0-1.32-1.32l-9.3,4.136a1,1,0,0,0-.508.507l-4.135,9.3a1,1,0,0,0,1.32,1.32l9.3-4.135a1,1,0,0,0,.508-.508l4.135-9.3ZM20.749,11.25l-2.923,6.577L11.25,20.75l2.923-6.577Z" transform="translate(-1 -1)" fill-rule="evenodd"></path> <circle id="Ellipse_1" data-name="Ellipse 1" cx="1.243" cy="1.243" r="1.243" transform="translate(13.757 13.757)"></circle> </g></svg>
+
+<svg id=suppi version="1.1" viewBox="-42.98 -42.98 416.55 416.55" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M52.575,320.395c-0.693,0-1.391-0.015-2.09-0.043c-12.979-0.54-25.361-6.071-34.865-15.576 c-9.504-9.504-15.035-21.886-15.576-34.864c-0.549-13.213,4.115-25.456,13.133-34.475L221.581,27.033 c11.523-11.523,27.197-17.483,44.096-16.78c16.676,0.693,32.594,7.81,44.822,20.037c12.228,12.229,19.346,28.147,20.037,44.823 c0.703,16.911-5.256,32.571-16.781,44.096L156.711,276.255c-2.928,2.927-7.676,2.928-10.607,0c-2.928-2.93-2.928-7.678,0-10.608 l157.045-157.047c8.523-8.522,12.928-20.194,12.4-32.865c-0.537-12.906-6.098-25.279-15.658-34.84 c-9.559-9.56-21.932-15.119-34.838-15.656c-12.67-0.533-24.344,3.876-32.865,12.399L23.784,246.044 c-12.596,12.594-11.498,34.184,2.443,48.125c6.836,6.837,15.672,10.813,24.881,11.195c8.975,0.349,17.229-2.734,23.244-8.752 l169.441-169.439c7.422-7.422,6.691-20.229-1.629-28.549c-4.113-4.114-9.414-6.505-14.924-6.733 c-5.289-0.212-10.115,1.595-13.625,5.106L95.536,215.08c-2.93,2.927-7.678,2.928-10.607,0c-2.93-2.93-2.93-7.678,0-10.607 L203.008,86.39c6.512-6.512,15.322-9.9,24.855-9.486c9.281,0.385,18.127,4.332,24.906,11.114 c14.17,14.167,14.9,36.49,1.631,49.762L84.959,307.22C76.418,315.76,64.985,320.395,52.575,320.395z"></path> </g> </g> </g></svg>
+
+<svg id=bibi viewBox="0 0 30 22" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>file_type_light_tex</title><path d="M11.333,13.122c-.128-1.562-.241-2.756-2.287-2.756H7.91v8.4h2.145v.611l-3.083-.029-3.082.029v-.611H6.034v-8.4H4.884c-2.046,0-2.159,1.208-2.287,2.756H2l.284-3.367h9.362l.284,3.367h-.6Z"></path><path d="M19.289,22.53H10.41V21.92h1.506V13.467H10.41v-.611h8.637l.412,3.367h-.6c-.213-1.833-.682-2.756-2.855-2.756H13.791V17.2h.838c1.364,0,1.505-.6,1.505-1.662h.6v3.935h-.6c0-1.08-.142-1.662-1.505-1.662h-.838v4.106h2.216c2.472,0,3-1.108,3.3-3.225h.6Z"></path><path d="M27.727,19.186c-.54,0-1.96,0-2.415.029V18.6h1.179l-2.557-3.552-2.529,3.381A4.1,4.1,0,0,0,22.7,18.6v.611c-.355-.029-1.576-.029-2.017-.029-.4,0-1.548,0-1.875.029V18.6h.383a7.459,7.459,0,0,0,.824-.043c.5-.043.54-.085.667-.256L23.536,14.5l-3.153-4.418H19V9.47c.384.028,1.79.028,2.273.028.582,0,1.918,0,2.429-.028v.611H22.528l2.117,2.955,2.074-2.784a4.1,4.1,0,0,0-1.293-.17V9.47c.356.028,1.591.028,2.032.028.4,0,1.534,0,1.861-.028v.611h-.369a5.264,5.264,0,0,0-.838.043c-.469.043-.526.071-.667.256l-2.4,3.21L28.636,18.6H30v.611C29.645,19.186,28.182,19.186,27.727,19.186Z"></path></g></svg>
 </div>
 
-<!-- <script type="text/javascript">
-function downloadJSAtOnload() {
-var element = document.createElement("script");
-var element2 = document.createElement("script");
-element2.src = "api.js";
-document.body.appendChild(element2);
-element.src = "ehp5defer.js";
-document.body.appendChild(element);
-}
-if (window.addEventListener)
-window.addEventListener("load", downloadJSAtOnload, false);
-else if (window.attachEvent)
-window.attachEvent("onload", downloadJSAtOnload);
-else window.onload = downloadJSAtOnload;
-</script> -->
-
+<script>
+// self executing function here
+(init)();
+</script>
 
 
 </body>
