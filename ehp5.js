@@ -16,14 +16,6 @@ var papers = [
     abs: `We show that it is possible to understand and identify a decision maker’s subjective causal judgements by observing her preferences over interventions. Following Pearl [2000], we represent causality using causal models (also called structural equations models), where the world is described by a collection of variables, related by equations. We show that if a preference relation over interventions satisfies certain axioms (related to standard axioms regarding counterfactuals), then we can define (i) a causal model, (ii) a probability capturing the decision-maker’s uncertainty regarding the external factors in the world and (iii) a utility on outcomes such that each intervention is associated with an expected utility and such that intervention A is preferred to B iff the expected utility of A is greater than that of B. In addition, we characterize when the causal model is unique. Thus, our results allow a modeler to test the hypothesis that a decision maker’s preferences are consistent with some causal model and to identify causal judgements from observed behavior.`
  },  
  {
-    title: `Eliciting Awareness`,
-    authors: [],
-    year: ``,
-    journal: ``,
-    url: `https://arxiv.org/pdf/2304.05142.pdf`,
-    abs: `This paper examines how a decision maker might incentive an expert, who is more aware than himself, to reveal novel contingencies. The decision maker choice will determine, along with the resolution of uncertainty, the payoffs to both players. I show that the set of achievable outcomes under any (incentive compatible) mechanism is characterized by a small and tractable class of iterated revelation mechanisms (IRMs). An IRM is a dynamic interaction wherein each round the decision maker proposes a plan of action and the expert chooses to reveal some novel contingencies; the IRM ends when nothing novel is revealed and the expert chooses which of the proposals gets implemented. I then consider the set of robust IRMs—those that maximize the worst case outcome across any possible awareness type of the expert—and show these are characterized by a principle of myopic optimality: at each round, the decision maker maximizes his payoff as if the expert had nothing further to reveal. It turns out, the outcomes achievable by any efficient mechanisms are also delineated by the set of robust IRMs`
- }, 
- {
     title: `Failures of Contingent Thinking`,
     authors: ['Zuazo-Garin, Peio'],
     year: ``,
@@ -54,6 +46,7 @@ var papers = [
     journal: ``,
     url: ``,
     abs: `An image conscious decision maker (DM) who cares not only about the physical consequences of his actions, but also how his actions are perceived by others. When a DM takes a choice, the resulting image is the set of preferences that are consistent with the observed choice. This paper axiomatizes the behavior of a DM who derives utility directly via consumption and also via the induced image. Because the image depends on what could have been chosen, the DM will display menu-dependent preferences. I consider two models: in the first, the modeler observes two stages of choice—over menus and then from the chosen menu; in the second, only the latter choices are observed. The two models share the same representation but uniqueness is obtained only in the first.`
+    supp: `pdfs/IC_Supp.pdf`
  },
         {
     title: `Heterogeneously Perceived Incentives in Dynamic Environments: Rationalization, Robustness and Unique Selections`,
