@@ -45,8 +45,8 @@ var papers = [
     year: `2022`,
     journal: ``,
     url: ``,
-    abs: `An image conscious decision maker (DM) who cares not only about the physical consequences of his actions, but also how his actions are perceived by others. When a DM takes a choice, the resulting image is the set of preferences that are consistent with the observed choice. This paper axiomatizes the behavior of a DM who derives utility directly via consumption and also via the induced image. Because the image depends on what could have been chosen, the DM will display menu-dependent preferences. I consider two models: in the first, the modeler observes two stages of choice—over menus and then from the chosen menu; in the second, only the latter choices are observed. The two models share the same representation but uniqueness is obtained only in the first.`
-    supp: `pdfs/IC_Supp.pdf`
+    abs: `An image conscious decision maker (DM) who cares not only about the physical consequences of his actions, but also how his actions are perceived by others. When a DM takes a choice, the resulting image is the set of preferences that are consistent with the observed choice. This paper axiomatizes the behavior of a DM who derives utility directly via consumption and also via the induced image. Because the image depends on what could have been chosen, the DM will display menu-dependent preferences. I consider two models: in the first, the modeler observes two stages of choice—over menus and then from the chosen menu; in the second, only the latter choices are observed. The two models share the same representation but uniqueness is obtained only in the first.`,
+    supp: `pdfs/IC_Supp.pdf`,
  },
         {
     title: `Heterogeneously Perceived Incentives in Dynamic Environments: Rationalization, Robustness and Unique Selections`,
