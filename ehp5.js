@@ -12,7 +12,7 @@ var papers = [
     authors: [`Halpern, Joseph Y.`],
     year: ``,
     journal: ``,
-    url: ``,
+    url: `https://arxiv.org/abs/2401.10937`,
     abs: `We show that it is possible to understand and identify a decision maker’s subjective causal judgements by observing her preferences over interventions. Following Pearl [2000], we represent causality using causal models (also called structural equations models), where the world is described by a collection of variables, related by equations. We show that if a preference relation over interventions satisfies certain axioms (related to standard axioms regarding counterfactuals), then we can define (i) a causal model, (ii) a probability capturing the decision-maker’s uncertainty regarding the external factors in the world and (iii) a utility on outcomes such that each intervention is associated with an expected utility and such that intervention A is preferred to B iff the expected utility of A is greater than that of B. In addition, we characterize when the causal model is unique. Thus, our results allow a modeler to test the hypothesis that a decision maker’s preferences are consistent with some causal model and to identify causal judgements from observed behavior.`
  },  
  {
