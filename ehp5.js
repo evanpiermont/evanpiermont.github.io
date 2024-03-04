@@ -1,12 +1,11 @@
 var papers = [
       {
-    title: `Eliciting Awareness`,
+    title: `Iterated Revelation: How to Incentive Experts to Complete Incomplete Contracts`,
     authors: [],
     year: ``,
     journal: ``,
     url: `https://arxiv.org/pdf/2304.05142.pdf`,
-    abs: `This paper examines how a decision maker might incentive an expert, who is more aware than himself, to reveal novel contingencies. The decision maker choice will determine, along with the resolution of uncertainty, the payoffs to both players. I show that the set of achievable outcomes under any (incentive compatible) mechanism is characterized by a small and tractable class of iterated revelation mechanisms (IRMs). An IRM is a dynamic interaction wherein each round the decision maker proposes a plan of action and the expert chooses to reveal some novel contingencies; the IRM ends when nothing novel is revealed and the expert chooses which of the proposals gets implemented. I then consider the set of robust IRMs—those that maximize the worst case outcome across any possible awareness type of the expert—and show these are characterized by a principle of myopic optimality: at each round, the decision maker maximizes his payoff as if the expert had nothing further to reveal. It turns out, the outcomes achievable by any efficient mechanisms are also delineated by the set of robust IRMs.`,
- },
+    abs: `This paper examines how a decision maker might incentivize an expert to reveal novel aspects of the decision problem, expanding the set of contracts from which the decision maker can choose. The chosen contract will determine, along with the resolution of uncertainty, the payoffs to both players. I show that the set of achievable outcomes under any (incentive compatible) mechanism is characterized by a small and tractable class of iterated revelation mechanisms (IRMs). An IRM is a dynamic interaction wherein each round the expert chooses to reveal some novel contingencies and the decision maker proposes a contract that the expert can accept or reject; the IRM ends after rejection or when nothing novel is revealed. I then consider the set of robust IRMs -- those that maximize the worst case outcome across all types of expert -- and show these are characterized by a principle of myopic optimality: at each round, the decision maker maximizes his payoff as if the expert had nothing further to reveal. The set of robust IRMs also delineate the payoffs achievable by any efficient mechanism.` },
        {
     title: `Subjective Causality`,
     authors: [`Halpern, Joseph Y.`],
