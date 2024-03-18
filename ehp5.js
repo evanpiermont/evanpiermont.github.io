@@ -179,10 +179,6 @@ var bibElements = []
 
 var now = new Date().getFullYear()
 
-function bibHelp(paper, param){
-    return paper[param] ? `\t${param}={${paper[param]}},\n` : ""
-}
-
 
 function createBib(paper){
    let stop = ['a', 'the', 'an']
@@ -196,20 +192,26 @@ function createBib(paper){
    }
    let year = paper['year'] || now
    let type = paper['journal'] ? `article` : `unpublished`
+   let url = paper['url'] || ""
    let bib =
    `
-   @${type}{piermont${year}${fw},
-        title={${title}},
-        author={${x}},
-        year={${year}}
-    ${bibHelp(paper,'journal')}${bibHelp(paper,'volume')}${bibHelp(paper,'number')}${bibHelp(paper,'url')}}
+   @${type}{piermont${year}${fw},\n
+   title={${title}},\n
+   author={${x}},\n
+   year={${paper['year']}},\n
+   ${url},
+}
+
    `
    return bib
 }
 
 function createPaperElements(paper) {
+  let paperLink = document.createElement('a');
   let paperDiv = document.createElement('div');
   paperDiv.classList.add('paper');
+  paperLink.appendChild(paperDiv);
+  paperLink.href = paper['url'];
 
   authors = paper['authors']
   if (authors.length === 0) {
@@ -222,20 +224,19 @@ function createPaperElements(paper) {
 
   let year = paper['year'] || now
 
-  let title = document.createElement('a');
+  let title = document.createElement('div');
   title.classList.add('paper_title');
   title.innerHTML = `<b>${paper['title']}</b>${authors}, ${year}. `;
-  title.href = paper['url'];
   paperDiv.appendChild(title);
 
   if(paper['journal']){
       let journal = document.createElement('span');
       journal.classList.add('paper_journal');
       let j = paper['journal']
-      let v = paper['volume'] ? `, Vol. ${paper['volume']}` : ""
-      let n = paper['number'] ? `, n. ${paper['number']}` : ""
-      let p = paper['pages'] ? `, p. ${paper['pages']}` : ""
-      journal.innerHTML = `<em>${j}</em>${v}${n}${p}.`
+      var idx = j.indexOf(',');
+      idx = idx=-1 ? j.length : idx;
+      j = '<em>' + j.substring(0, idx) + '</em>' + j.substring(idx);
+      journal.innerHTML = j;
       title.appendChild(journal);
   }
 
@@ -271,9 +272,9 @@ buttons.prepend(supp_b);
 let bib_b = document.createElement('span');
   bib_b.classList.add('bib_button');
   bib_b.innerHTML = `
-<svg class=icon viewBox="0 0 32 32">
+<svg class=icon viewBox="0 0 100 100">
   <use href="#bibi" />
-</svg> copy citation`;
+</svg> cite`;
  bib_b.setAttribute('data-bibtex', createBib(paper))
 
   buttons.prepend(bib_b);
@@ -286,7 +287,7 @@ let bib_b = document.createElement('span');
 
   
 
-  return {div: paperDiv, loc:type};
+  return {div: paperLink, loc:type};
 }
 
 function appendPapersToDOM() {
@@ -316,7 +317,7 @@ function flashMessage(msg) {
     flashMessage.style.display = 'block';
     setTimeout(function () {
       flashMessage.style.display = 'none';
-    }, 1500);
+    }, 1000);
   }
 
 
@@ -325,24 +326,23 @@ init = function() {
    appendPapersToDOM();
 
   absElements.forEach(function(absElement) {
-    absElement.addEventListener('click', function() {
+    absElement.addEventListener('click', function(e) {
       let textElement = this.parentNode.parentNode.querySelector('.paper_abs_text')
       textElement.style.display = (textElement.style.display === 'none' || textElement.style.display === '') ? 'block' : 'none';
+      e.preventDefault()
     });
   });
 
   bibElements.forEach(function (bibButton) {
-      bibButton.addEventListener('click', function () {
+      bibButton.addEventListener('click', function (e) {
         var bibtexData = this.getAttribute('data-bibtex');
-        console.log(bibtexData)
         copyto(bibtexData)
         flashMessage(`Copied: ${bibtexData}`)
+        e.preventDefault()
      });
    });
 
 };
-
-
 
 
 
