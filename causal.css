@@ -1,0 +1,143 @@
+:root {
+  --gray: #34495e;
+  --darkgray: #2c3e50;
+  --bg: #FBF3D5;
+  --card: #D6DAC8;
+}
+
+body{
+  padding: 50px;
+  background-color: var(--bg);
+  font-family: Verdana, sans-serif;
+}
+
+#input{
+  display: flex;
+  justify-content:center;
+}
+
+.card{
+  height: 120px;
+  width: 120px;
+  margin-bottom: 50px;
+}
+
+.cardWrap{
+  margin: 20px;
+  background-color: var(--card);
+  border: 2px solid var(--darkgray);
+  padding: 20px;
+
+}
+
+.cardtitle{
+  width: 100%;
+  text-align: center;
+  padding: 4px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid var(--gray);
+  text-transform: uppercase;
+}
+
+/*  */
+
+.selectWrap{
+ display: flex;
+ flex-direction: column;
+  align-items: center;
+ justify-content: center; 
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 10px red;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: var(--bg);
+  background-color: var(--gray);
+  background-image: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 1.5em;
+  border-radius: .25em;
+  overflow: hidden;
+  margin-bottom: 3px;
+}
+
+#ruleSelect .select{
+  width: 180px;
+}
+
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 5;
+  padding: .1em;
+  background-color: var(--gray);
+  transition: .25s all ease;
+  pointer-events: none;
+  color: var(--bg)
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+
+a {
+  font-weight: bold;
+  color: var(--gray);
+  text-decoration: drop-shadow;
+  padding: .25em;
+  border-radius: .50em;
+  background: pink;
+}
+
+.container {
+  position : absolute;
+  top: 50%;
+  left : 50%;
+  transform :
+  translate(-50%,-50%); 
+}
+
+#rules{
+  position: relative;
+  width: 60%;
+  left: 20%;
+}
+
+#ruleName{
+ font-size: 120%;
+ border-bottom: 2px solid var(--darkgray);
+ width: 100%;
+ padding: 4px;
+ margin-bottom: 10px;
+}
+
+#ruleSelect{
+  position: absolute;
+}
+
+#ruleSelect .select{
+  margin-top: 5px;
+}
+
+
+
