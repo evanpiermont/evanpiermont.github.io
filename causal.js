@@ -259,7 +259,7 @@ function createSelect(options, name, callback, target, defualt=null, update=null
             option.value = key;
             option.text = options[key];
             select.appendChild(option);
-            option.addEventListener("click", function() {
+            select.addEventListener("change", function() {
                 d = {}
                 d[name] = this.value
                 callback(d,update)
