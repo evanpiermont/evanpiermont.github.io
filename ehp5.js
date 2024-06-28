@@ -182,9 +182,9 @@ var now = new Date().getFullYear()
 
 function createBib(paper){
    let stop = ['a', 'the', 'an']
-   let x = paper['authors']
-   x.push('Piermont., Evan');
-   x = x.sort().join(' and ')
+   let author = paper['authors']
+   author.push('Piermont., Evan');
+   author = author.sort().join(' and ')
    title = paper['title']
    let fw = title.split(' ')[0].toLowerCase()
    if(stop.includes(fw)){
@@ -192,17 +192,17 @@ function createBib(paper){
    }
    let year = paper['year'] || now
    let type = paper['journal'] ? `article` : `unpublished`
-   let url = paper['url'] || ""
-   let bib =
-   `
-   @${type}{piermont${year}${fw},\n
-   title={${title}},\n
-   author={${x}},\n
-   year={${paper['year']}},\n
-   ${url},
-}
 
-   `
+   let key = `piermont${year}${fw},\n`
+   title=`\ttitle={${title}},\n`
+   author=`\tauthor={${author}},\n`
+   year=`\tyear={${year}},\n`
+   let journal = paper['journal'] ? `\tjournal={${paper['journal']}},\n` : ""
+   let url = paper['url'] ? `\turl={${paper['url']}},\n` : ""
+    let bib =
+`@${type}{${key}${title}${author}${year}${journal}${url}}`
+   
+   console.log(bib)
    return bib
 }
 
