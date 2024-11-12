@@ -37,6 +37,7 @@ a {
     position: fixed;
     background: lightgrey;
     z-index: 10;
+    font-size: 130%;
 }
 
 input:focus{
@@ -74,7 +75,9 @@ input:focus{
     text-align: center;
     position: fixed;
     font-size: 50%;
+    border: none;
     border-right: 2px solid black;
+    background: darkcyan;
 }
 
 .submit{
@@ -86,25 +89,21 @@ input:focus{
     height: 7%;
     top:10%;
     left:65%;
+    background: darkcyan;
+
 }
 
 .loginsubmit{
     top: 35%;
 }
 
-input{
-    position: absolute;
-    border: none;
-    font-size: 50%;
-    background: darkcyan;
-}
 
 #data_page{
     position: absolute;
     width: 80%;
-    top: 20%;
+    top: 230px;
     left: 10%;
-    font-size: 45%;
+    font-size: 75%;
 }
 
 .capitalize {
@@ -117,7 +116,51 @@ input{
 
 #error{
     display: none;
+    color: #b03a2e;
 }
+
+#idform{
+    position: absolute;
+    width: 100%;
+    background: none;
+    
+}
+/* Styles for the checkbox container */
+.checkboxholder {
+    top: 150px;
+    left: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 3px;
+}
+
+/* Styles for the checkboxes */
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: darkcyan; /* Color for the checkbox when selected */
+    border-radius: 4px; /* Rounded corners for the checkbox */
+    margin-left: 10px;
+
+}
+
+/* Styles for the labels of checkboxes */
+input[type="radio"] + label {
+    font-size: 45%; /* Font size to match the surrounding text */
+    color: #333; /* Text color for labels */
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Optional: hover effect for checkbox labels */
+input[type="radio"] + label:hover {
+    color: #ED8689; /* Change color on hover for better interactivity */
+}
+
 
 
 
