@@ -242,6 +242,10 @@ a.social{
     color: #c733ff;
 }
 
+.delimit{
+    color: 1f99fe;
+}
+
 @media only screen and (max-width: 768px) {
     
     #name{
