@@ -79,7 +79,7 @@ var papers = [
     journal: ``,
     url: `https://arxiv.org/pdf/2106.15979.pdf`,
     abs: `This paper provides a model to analyze and identify a decision maker’s hypothetical reasoning.  Using this model, I show that a DM’s propensity to engage in hypo-thetical thinking is captured exactly by her ability to recognize implications (i.e., toidentify that one hypothesis implies another) and that this later relation is capturedby a DM’s observable behavior.  Thus, this characterization both provides a concretedefinition of (flawed) hypothetical reasoning and, importantly, yields a methodologyto identify these judgments from standard economic data.`,
-    kw: ['axiomatics'],
+    kw: ['axiomatics', 'language'],
  },
         {
     title: `Distributional Uncertainty and Persuasion`,
@@ -97,7 +97,7 @@ var papers = [
     journal: `Review of Symbolic Logic`,
     url: `https://doi.org/10.1017/S1755020323000308 `,
     abs: `This paper puts forth a class of algebraic structures, relativized Boolean algebras (RBAs), that provide semantics for propositional logic in which truth/validity is only defined relative to a local domain. In particular, the join of an event and its complement need not be the top element. Nonetheless, behavior is locally governed by the laws of propositional logic. By further endowing these structures with operators (akin to the theory of modal Algebras) RBAs serve as models of modal logics in which truth is relative. In particular, modal RBAs provide semantics for various well known awareness logics.`,
-    kw: ['logic'],
+    kw: ['logic', 'awareness'],
  },
      {
     title: `Unawareness and Risk Taking: The Role of Context`,
@@ -359,7 +359,6 @@ function createFilterButton(str) {
         span.classList.add('active_filter');
         activeFilter.add(str);
     }
-
     // Apply the filter
     applyFilter();
 });
@@ -370,7 +369,6 @@ function createFilterButton(str) {
 function applyFilter() {
 
     const paperLinks = document.querySelectorAll(".paper_link");
-
     paperLinks.forEach(element => {
             element.style.display = "";
     })
@@ -386,6 +384,7 @@ function applyFilter() {
             }
         });
     }
+    document.getElementById("nav_research").click();
 }
 
 function appendPapersToDOM() {
