@@ -142,40 +142,62 @@ a, a:visited, a:link {
 }
 
 .paper{
-    margin-bottom: 25px;
-    font-size: 18px;
+    font-size: 15px;
     background-color: var(--bg);
     border-radius: 5px;
     padding: 10px;
+    margin-top: 10px;
 }
 
+.papaer-link::hover{
+    opacity: 0;
+}
 
-.paper_buts{
-    margin-top: 10px;
-    margin-left: 10px;
-    padding-left: 10px;
-    border-top: 1px solid;
-    padding-bottom: 15px;
-    padding-top: 10px;
-    border-image: linear-gradient(to right, var(--font) 30%, transparent 10%) 100% 1;
+.paper_kw{
+ font-size: 14px;
+ color: var(--font2);
+ opacity: 0;
+}
+
+.paper_link:hover > .paper_kw{
+    opacity: 1;
 }
 
 .paper_buts .icon{
-    height: 25px;
-    width: 25px;
+    height: 15px;
+    width: 15px;
 }
 
-.paper_buts span, .paper_buts a{
+.filter_button, .paper_buts span, .paper_buts a{
     cursor: pointer;
     background-color: var(--bg2);
-    padding: 3px 10px 3px 10px;
+    padding: 3px 6px 3px 6px;
     border-radius: 10px;
     color: var(--font2);
     border: 1px solid var(--acc2);
-    margin-right: 20px;
+    margin-right: 15px;
+    font-size: 12px;
 }
 
+.paper_buts{
+    margin-top: 3px;
+}
+
+
+
+#filter_buttons .filter_button:hover {
+    background-color: var(--acc);
+    color: var(--bg2);
+}
+
+.active_filter{
+        background-color: var(--acc);
+        color: var(--acc2);
+        border: 1px solid var(--font2);
+    }
+
 .paper_abs_text{
+    margin-top:15px;
     display: none;
 }
 
@@ -290,7 +312,7 @@ a.social{
     padding-top: 5px;
 }
     
-    .paper_buts span, .paper_buts a{
+   .paper_buts span, .paper_buts a{
     padding: 3px 7px 3px 2px;
     border-radius: 10px;
     color: var(--font2);
