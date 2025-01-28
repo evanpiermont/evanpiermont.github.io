@@ -312,6 +312,10 @@ a.social{
     padding-top: 5px;
 }
     
+    .filter_button{
+        display: none;
+    }
+    
    .paper_buts span, .paper_buts a{
     padding: 3px 7px 3px 2px;
     border-radius: 10px;
