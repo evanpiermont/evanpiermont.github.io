@@ -1,0 +1,366 @@
+Day,Latitude,Skiing Condition
+1,-20.073580984422,Not good for skiing
+2,72.11428902558657,Good for skiing
+3,37.11903068982481,Good for skiing
+4,15.785357471525856,Not good for skiing
+5,-55.03701752921016,Not good for skiing
+6,-55.04087674620757,Not good for skiing
+7,-70.70662205308808,Not good for skiing
+8,58.588183323989625,Good for skiing
+9,16.178401878913405,Not good for skiing
+10,33.29161244736727,Good for skiing
+11,-76.70648091267161,Not good for skiing
+12,75.18557634591909,Good for skiing
+13,53.190822528067486,Good for skiing
+14,-46.025742291475815,Not good for skiing
+15,-50.9080052468639,Not good for skiing
+16,-50.65527842345059,Not good for skiing
+17,-31.321241126473964,Not good for skiing
+18,3.961029061158058,Not good for skiing
+19,-10.888797017261481,Not good for skiing
+20,-33.40333756831329,Not good for skiing
+21,17.89646315558072,Good for skiing
+22,-57.6809822956733,Not good for skiing
+23,-33.256856234365095,Not good for skiing
+24,-21.382105073009328,Not good for skiing
+25,-7.028802525274244,Not good for skiing
+26,45.62815382288218,Good for skiing
+27,-48.052194854662446,Not good for skiing
+28,2.2775101461778604,Not good for skiing
+29,14.786331017926798,Not good for skiing
+30,-72.56793396480036,Not good for skiing
+31,17.20717630423013,Not good for skiing
+32,-52.71614021003336,Not good for skiing
+33,-69.59174512235528,Not good for skiing
+34,71.82168596053333,Good for skiing
+35,74.5011252919295,Good for skiing
+36,49.34357569863377,Good for skiing
+37,-31.261796932260694,Not good for skiing
+38,-64.37246175897857,Not good for skiing
+39,29.4772842419451,Good for skiing
+40,-9.575601001663784,Not good for skiing
+41,-60.47388242483539,Not good for skiing
+42,-0.7716943821967703,Not good for skiing
+43,-74.49783662156506,Not good for skiing
+44,65.49126433260514,Good for skiing
+45,-38.59520294399729,Not good for skiing
+46,26.003565496637123,Good for skiing
+47,-30.126227825694244,Not good for skiing
+48,3.21088338844973,Not good for skiing
+49,7.473644694924744,Not good for skiing
+50,-50.42328711591567,Not good for skiing
+51,75.13354044232938,Good for skiing
+52,44.02125173777833,Good for skiing
+53,70.31983065027026,Good for skiing
+54,63.1723760684238,Good for skiing
+55,15.66399660977362,Not good for skiing
+56,67.49987760369868,Good for skiing
+57,-65.84119967169288,Not good for skiing
+58,-48.642742012936765,Not good for skiing
+59,-72.76363377431392,Not good for skiing
+60,-27.947147077877702,Not good for skiing
+61,-17.811633649682875,Not good for skiing
+62,-36.58415491617666,Not good for skiing
+63,52.59800146430871,Good for skiing
+64,-22.919467729025712,Not good for skiing
+65,-35.05047845001908,Not good for skiing
+66,6.831373305319758,Not good for skiing
+67,-57.45212400403798,Not good for skiing
+68,48.35151692064636,Good for skiing
+69,-68.07189701123667,Not good for skiing
+70,77.90190985608277,Good for skiing
+71,43.55916308746518,Good for skiing
+72,-48.205490954532415,Not good for skiing
+73,-79.11646126022362,Not good for skiing
+74,50.473828552773455,Good for skiing
+75,33.097175015618745,Good for skiing
+76,36.641146886557976,Good for skiing
+77,43.403255469751315,Good for skiing
+78,-68.15285572254554,Not good for skiing
+79,-22.64548343291638,Not good for skiing
+80,-61.460950475979246,Not good for skiing
+81,58.09654814009497,Good for skiing
+82,19.727700292409267,Not good for skiing
+83,-27.05631602357613,Not good for skiing
+84,-69.83066395423621,Not good for skiing
+85,-30.242828525494048,Not good for skiing
+86,-27.970668475720473,Not good for skiing
+87,36.736988534090244,Good for skiing
+88,22.009195416834103,Not good for skiing
+89,61.95403881221225,Good for skiing
+90,-4.445611974088109,Not good for skiing
+91,-60.86492064987173,Not good for skiing
+92,34.11916595567919,Not good for skiing
+93,41.72560777870359,Not good for skiing
+94,9.804351611119401,Not good for skiing
+95,43.354748792729765,Good for skiing
+96,-0.9927045816974811,Not good for skiing
+97,3.6372527011190527,Not good for skiing
+98,-11.593437062632063,Not good for skiing
+99,-75.93293972094477,Not good for skiing
+100,-62.73737168107129,Not good for skiing
+101,-74.97133029012252,Not good for skiing
+102,21.825665802204867,Not good for skiing
+103,-29.70304302778773,Not good for skiing
+104,1.3713105863524504,Not good for skiing
+105,65.21063582817487,Not good for skiing
+106,-40.113243336180005,Not good for skiing
+107,-14.33873231429925,Not good for skiing
+108,40.88818216688779,Not good for skiing
+109,-43.392293521340406,Not good for skiing
+110,-67.68321442739312,Not good for skiing
+111,-33.63976753379711,Not good for skiing
+112,-54.20459403935929,Not good for skiing
+113,68.75162437481168,Not good for skiing
+114,49.29926073030671,Not good for skiing
+115,21.344601041667758,Not good for skiing
+116,59.43369443003485,Not good for skiing
+117,48.587532303858325,Not good for skiing
+118,-50.14879057823427,Not good for skiing
+119,62.80943975839645,Not good for skiing
+120,6.294758706504112,Not good for skiing
+121,49.190424826249995,Not good for skiing
+122,63.37460798775891,Not good for skiing
+123,-29.11944400450178,Not good for skiing
+124,-62.39169207557172,Not good for skiing
+125,-43.53037399328933,Not good for skiing
+126,-11.662753819798994,Not good for skiing
+127,50.88236254759889,Not good for skiing
+128,57.716893321014936,Not good for skiing
+129,-78.88765911500948,Not good for skiing
+130,1.7195684124105242,Not good for skiing
+131,-13.214239496195361,Not good for skiing
+132,-44.46275032468316,Not good for skiing
+133,-60.82154122661075,Not good for skiing
+134,-25.981572575419527,Not good for skiing
+135,70.86555262600308,Not good for skiing
+136,-28.287530876679163,Not good for skiing
+137,3.0064994789385793,Not good for skiing
+138,32.48303342322845,Not good for skiing
+139,-21.819263619312963,Not good for skiing
+140,75.48513323535371,Not good for skiing
+141,73.99156719073778,Not good for skiing
+142,-39.714832667941735,Not good for skiing
+143,-0.4402390572183208,Not good for skiing
+144,-31.859470429316858,Not good for skiing
+145,-34.42552089960518,Not good for skiing
+146,-74.09808842327476,Not good for skiing
+147,17.530293436783495,Not good for skiing
+148,0.4286437166178416,Not good for skiing
+149,-71.76339980000171,Not good for skiing
+150,-35.41656572214217,Good for skiing
+151,65.3225417546646,Not good for skiing
+152,-41.670097493284416,Not good for skiing
+153,-56.816820465404305,Not good for skiing
+154,-1.687558355589914,Not good for skiing
+155,77.70407265769612,Not good for skiing
+156,-41.27115655815993,Not good for skiing
+157,27.541687584940576,Not good for skiing
+158,41.859138452594806,Not good for skiing
+159,-41.97799296121605,Not good for skiing
+160,36.51461577789753,Not good for skiing
+161,-21.154698764919488,Not good for skiing
+162,21.168932894972713,Not good for skiing
+163,21.364753721743156,Not good for skiing
+164,5.72394945196136,Not good for skiing
+165,-65.55363679129468,Good for skiing
+166,53.64839929427808,Not good for skiing
+167,-28.675189604522267,Not good for skiing
+168,-50.15703833602332,Good for skiing
+169,-73.47597735123777,Good for skiing
+170,14.542870910118694,Not good for skiing
+171,28.410297894765193,Not good for skiing
+172,-77.34594737154302,Good for skiing
+173,1.9348893278849602,Not good for skiing
+174,-43.76067596832993,Good for skiing
+175,23.22764646551198,Not good for skiing
+176,-52.101371359201366,Good for skiing
+177,30.55003809639456,Not good for skiing
+178,-18.122344591914015,Good for skiing
+179,69.87679819787752,Not good for skiing
+180,-57.99664893664108,Good for skiing
+181,-25.42938383195864,Good for skiing
+182,-61.84423660150575,Good for skiing
+183,67.95097892457005,Not good for skiing
+184,60.37429654095695,Not good for skiing
+185,-38.7293395655751,Good for skiing
+186,25.59744736546864,Not good for skiing
+187,50.755552032194544,Not good for skiing
+188,8.832129855913976,Not good for skiing
+189,4.744092536961034,Not good for skiing
+190,-41.30363345592773,Good for skiing
+191,-65.10355715105612,Good for skiing
+192,63.55452127253227,Not good for skiing
+193,64.06688914613287,Not good for skiing
+194,21.296233163722874,Not good for skiing
+195,-25.755233432207888,Good for skiing
+196,-24.126468061974258,Good for skiing
+197,36.1529086192383,Not good for skiing
+198,63.53764159241234,Not good for skiing
+199,61.93382788241877,Not good for skiing
+200,44.78008733721981,Not good for skiing
+201,22.725063384686038,Not good for skiing
+202,-66.53760560079219,Good for skiing
+203,-54.1394057448618,Good for skiing
+204,63.76867016433269,Not good for skiing
+205,17.028649545534392,Not good for skiing
+206,-78.52847174133926,Good for skiing
+207,-63.76455314143486,Good for skiing
+208,26.160283057288922,Not good for skiing
+209,-79.190146584605,Good for skiing
+210,-54.27071177320022,Good for skiing
+211,7.797406298653783,Not good for skiing
+212,30.703231630830913,Not good for skiing
+213,24.313801520416092,Not good for skiing
+214,-44.11691048631043,Good for skiing
+215,33.948675415605734,Not good for skiing
+216,-42.04014600051199,Good for skiing
+217,-27.936048294517164,Good for skiing
+218,39.438624818883866,Not good for skiing
+219,23.941263847554353,Not good for skiing
+220,55.87574567906847,Not good for skiing
+221,25.218062768054935,Not good for skiing
+222,10.929376533675452,Not good for skiing
+223,-65.0120371475052,Good for skiing
+224,-21.165471510490633,Not good for skiing
+225,-37.56762117092393,Good for skiing
+226,-40.96165705934663,Good for skiing
+227,75.6816887603913,Not good for skiing
+228,-17.104364053318335,Not good for skiing
+229,62.72744882833814,Not good for skiing
+230,20.982180159562063,Not good for skiing
+231,47.16980856666375,Not good for skiing
+232,0.4219348968307344,Not good for skiing
+233,12.304621540217454,Not good for skiing
+234,-1.1971689889817725,Not good for skiing
+235,-48.76112195231288,Not good for skiing
+236,35.59233844184085,Not good for skiing
+237,-35.07642200946307,Not good for skiing
+238,-76.10944537096739,Good for skiing
+239,23.275567345146854,Not good for skiing
+240,-51.66229129487217,Good for skiing
+241,70.47337349646628,Not good for skiing
+242,72.62857232041398,Not good for skiing
+243,66.37830243527176,Not good for skiing
+244,-20.7746079591289,Not good for skiing
+245,-77.52694135538121,Good for skiing
+246,68.53097001403606,Not good for skiing
+247,-11.490536269229708,Not good for skiing
+248,74.66477104698714,Not good for skiing
+249,74.17919633428045,Not good for skiing
+250,56.48151287477762,Not good for skiing
+251,-32.888177268866286,Not good for skiing
+252,-18.38436342369196,Not good for skiing
+253,56.1818674426971,Not good for skiing
+254,-29.292479174995577,Not good for skiing
+255,-52.8811605302252,Not good for skiing
+256,9.088201993336028,Not good for skiing
+257,69.78476386572495,Not good for skiing
+258,31.364767467995676,Not good for skiing
+259,11.209787214298387,Not good for skiing
+260,-64.45176099667704,Not good for skiing
+261,18.401156271867166,Not good for skiing
+262,78.40861601668212,Not good for skiing
+263,-57.58655756215616,Not good for skiing
+264,2.9327443781978815,Not good for skiing
+265,60.37969150847286,Not good for skiing
+266,38.52297884067271,Not good for skiing
+267,31.522518559242883,Not good for skiing
+268,32.397453437937486,Not good for skiing
+269,-22.481415804839173,Not good for skiing
+270,-33.02530491768106,Not good for skiing
+271,49.49778487656218,Not good for skiing
+272,49.618143148668935,Not good for skiing
+273,58.7315709728166,Not good for skiing
+274,66.11848840903542,Not good for skiing
+275,1.8147838177500546,Not good for skiing
+276,0.24260714995193666,Not good for skiing
+277,47.727228634684025,Not good for skiing
+278,23.994228924442424,Not good for skiing
+279,32.31470036123254,Not good for skiing
+280,47.32682710977616,Not good for skiing
+281,62.400854690810604,Not good for skiing
+282,-25.92077490375427,Not good for skiing
+283,-19.90672757760896,Not good for skiing
+284,-64.96288962546096,Not good for skiing
+285,12.524822559387843,Not good for skiing
+286,-74.24923619252127,Not good for skiing
+287,-5.504317098806382,Not good for skiing
+288,6.823141553212253,Not good for skiing
+289,-34.153399659474495,Not good for skiing
+290,14.53332169104172,Not good for skiing
+291,-75.11996000975209,Not good for skiing
+292,-74.0242898001257,Not good for skiing
+293,51.616089705545335,Not good for skiing
+294,-22.369497374197934,Not good for skiing
+295,-59.67031797569844,Not good for skiing
+296,3.5589216087686992,Not good for skiing
+297,43.198968495777734,Not good for skiing
+298,-45.468635600505095,Not good for skiing
+299,19.662476131040037,Not good for skiing
+300,-66.34440560099712,Not good for skiing
+301,-71.73092461302276,Not good for skiing
+302,5.016741050903676,Not good for skiing
+303,6.501619457617039,Not good for skiing
+304,21.988784239713056,Not good for skiing
+305,36.17461339562584,Good for skiing
+306,76.13633271400553,Good for skiing
+307,2.608055728191246,Not good for skiing
+308,-28.326964329400646,Not good for skiing
+309,47.22979116299258,Good for skiing
+310,-36.666839798068125,Not good for skiing
+311,-9.764572687098223,Not good for skiing
+312,-67.44697898523745,Not good for skiing
+313,-75.9438810535268,Not good for skiing
+314,74.02374634846802,Good for skiing
+315,53.75681928195294,Good for skiing
+316,31.355872974991684,Good for skiing
+317,-14.567528893716826,Not good for skiing
+318,-52.27290878866468,Not good for skiing
+319,-54.97007317262623,Not good for skiing
+320,-39.96113629366475,Not good for skiing
+321,7.876266352979272,Not good for skiing
+322,34.33534763200997,Not good for skiing
+323,25.631580274837006,Not good for skiing
+324,-35.210576488649146,Not good for skiing
+325,72.77844490611105,Good for skiing
+326,38.063506671322955,Good for skiing
+327,8.696648401824106,Not good for skiing
+328,17.875319397496355,Not good for skiing
+329,-12.86399001155361,Not good for skiing
+330,-40.363041679814806,Not good for skiing
+331,-23.044371415798146,Not good for skiing
+332,41.255377674299055,Not good for skiing
+333,-77.69704181923906,Not good for skiing
+334,-61.4283775188934,Not good for skiing
+335,-72.63957727651956,Not good for skiing
+336,-73.48339162896478,Not good for skiing
+337,56.87369344176116,Good for skiing
+338,32.58525750080379,Good for skiing
+339,-4.132187346027962,Not good for skiing
+340,-64.34653429583976,Not good for skiing
+341,-1.3414599813068264,Not good for skiing
+342,-4.2445166751094945,Not good for skiing
+343,-52.28770081439757,Not good for skiing
+344,-10.583736121924318,Not good for skiing
+345,-16.239242496420246,Not good for skiing
+346,18.536015688354638,Not good for skiing
+347,21.614984138823004,Not good for skiing
+348,-72.75135843647288,Not good for skiing
+349,-20.061981659764605,Not good for skiing
+350,20.137586514277814,Not good for skiing
+351,0.5018013728140289,Not good for skiing
+352,57.03837459013155,Good for skiing
+353,25.390981059031205,Not good for skiing
+354,-53.93049166697125,Not good for skiing
+355,-68.70900041593123,Not good for skiing
+356,22.787084513010498,Not good for skiing
+357,-75.7581903133405,Not good for skiing
+358,13.72409300375412,Not good for skiing
+359,70.43683862799321,Good for skiing
+360,12.07586846014064,Not good for skiing
+361,-17.892811806956495,Not good for skiing
+362,22.92611495077651,Not good for skiing
+363,-6.679537521357332,Not good for skiing
+364,7.298686290549597,Not good for skiing
+365,70.63436940424401,Good for skiing

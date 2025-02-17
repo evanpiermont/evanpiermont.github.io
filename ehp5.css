@@ -247,6 +247,14 @@ a.social{
       z-index: 10;
     }
 
+.hl3,{
+    color: #BE3144;
+}
+
+.rr{
+    color: var(--acc2);
+}
+
 /* tunes */
 
 #wrapfortunes{
@@ -295,7 +303,7 @@ a.social{
     
     
     .paper{
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     font-size: 12px;
 }
     
