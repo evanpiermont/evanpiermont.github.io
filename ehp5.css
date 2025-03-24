@@ -142,7 +142,7 @@ a, a:visited, a:link {
 }
 
 .paper{
-    font-size: 15px;
+    font-size: 16px;
     background-color: var(--bg);
     border-radius: 5px;
     padding: 10px;
@@ -180,7 +180,7 @@ a, a:visited, a:link {
 }
 
 .paper_buts{
-    margin-top: 3px;
+    margin-top: 10px;
 }
 
 

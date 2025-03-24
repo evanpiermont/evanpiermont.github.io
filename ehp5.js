@@ -1,24 +1,34 @@
 var papers = [
-{
-    title: `Failures of Contingent Thinking`,
-    authors: ['Zuazo-Garin, Peio'],
-    year: ``,
-    journal: ``,
-    rr: `Theoretical Economics`,
-    url: `https://arxiv.org/pdf/2007.07703.pdf`,
-    abs: `In this paper, we provide a theoretical framework to analyze an agent who misinterprets or misperceives the true decision problem she faces. Within this framework, we show that a wide range of behavior observed in experimental settings manifest as failures to perceive implications, in other words, to properly account for the logical relationships between various payoff relevant contingencies. We present behavioral characterizations corresponding to several benchmarks of logical sophistication and show how it is possible to identify which implications the agent fails to perceive. Thus, our framework delivers both a methodology for assessing an agent's level of contingent thinking and a strategy for identifying her beliefs in the absence full rationality.`,
-    kw: ['logic', 'language', 'axioms'],
- }, 
-{
+    {
     title: `Iterated Revelation: How to Incentivize Experts to Reveal Novel Actions`,
     authors: [],
     year: ``,
     journal: ``,
-    rr: ``,
+    rr: {j: `the American Economic Review`, s: 'Reject'},
     url: `https://arxiv.org/pdf/2304.05142.pdf`,
     abs: `This paper examines how a decision maker might incentivize an expert to reveal novel aspects of the decision problem, expanding the set of contracts from which the decision maker can choose. The chosen contract will determine, along with the resolution of uncertainty, the payoffs to both players. I show that the set of achievable outcomes under any (incentive compatible) mechanism is characterized by a small and tractable class of iterated revelation mechanisms (IRMs). An IRM is a dynamic interaction wherein each round the expert chooses to reveal some novel contingencies and the decision maker proposes a contract that the expert can accept or reject; the IRM ends after rejection or when nothing novel is revealed. I then consider the set of robust IRMs -- those that maximize the worst case outcome across all types of expert -- and show these are characterized by a principle of myopic optimality: at each round, the decision maker maximizes his payoff as if the expert had nothing further to reveal. The set of robust IRMs also delineate the payoffs achievable by any efficient mechanism.` ,
     kw: ['awareness', 'game-theory'],
 },
+   {
+    title: `Failures of Contingent Thinking`,
+    authors: ['Zuazo-Garin, Peio'],
+    year: ``,
+    journal: ``,
+    rr: {j: `Theoretical Economics`, s: 'Revise'},
+    url: `https://arxiv.org/pdf/2007.07703.pdf`,
+    abs: `In this paper, we provide a theoretical framework to analyze an agent who misinterprets or misperceives the true decision problem she faces. Within this framework, we show that a wide range of behavior observed in experimental settings manifest as failures to perceive implications, in other words, to properly account for the logical relationships between various payoff relevant contingencies. We present behavioral characterizations corresponding to several benchmarks of logical sophistication and show how it is possible to identify which implications the agent fails to perceive. Thus, our framework delivers both a methodology for assessing an agent's level of contingent thinking and a strategy for identifying her beliefs in the absence full rationality.`,
+    kw: ['logic', 'language', 'axioms'],
+ }, 
+   {
+    title: `Misspecified Information in Dynamic Games`,
+    authors: ['Zuazo-Garin, Peio'],
+    year: ``,
+    journal: ``,
+    rr: {j: `the Journal of Economic Theory`, s: 'revise'},
+    url: `https://arxiv.org/abs/2105.06772`,
+    abs: `In dynamic settings each economic agent's choices can be revealing of her private information. This elicitation via the rationalization of observable behavior depends each agent's perception of which payoff-relevant contingencies other agents persistently deem as impossible. We formalize the potential heterogeneity of these perceptions as disagreements at higher-orders about the set of payoff states of a dynamic game. We find that apparently negligible disagreements greatly affect how agents interpret information and assess the optimality of subsequent behavior: When knowledge of the state space is only 'almost common', strategic uncertainty may be greater when choices are rationalized than when they are not--forward and backward induction predictions, respectively, and while backward induction predictions are robust to small disagreements about the state space, forward induction predictions are not. We also prove that forward induction predictions always admit unique selections a la Weinstein and Yildiz (2007) (also for spaces not satisfying richness) and backward induction predictions do not.`,
+    kw: ['game-theory'],
+ },
     {
     title: `Modeling the Modeler: A Normative Theory of Experimental Design`,
     authors: ['Payró, Fernando'],
@@ -40,27 +50,19 @@ var papers = [
     kw: ['logic', 'language', 'axioms'],
 },        
     {
-    title: `Heterogeneously Perceived Incentives in Dynamic Environments: Rationalization, Robustness and Unique Selections`,
-    authors: ['Zuazo-Garin, Peio'],
-    year: ``,
-    journal: ``,
-    rr: `the Journal of Economic Theory`,
-    url: `https://arxiv.org/abs/2105.06772`,
-    abs: `In dynamic settings each economic agent's choices can be revealing of her private information. This elicitation via the rationalization of observable behavior depends each agent's perception of which payoff-relevant contingencies other agents persistently deem as impossible. We formalize the potential heterogeneity of these perceptions as disagreements at higher-orders about the set of payoff states of a dynamic game. We find that apparently negligible disagreements greatly affect how agents interpret information and assess the optimality of subsequent behavior: When knowledge of the state space is only 'almost common', strategic uncertainty may be greater when choices are rationalized than when they are not--forward and backward induction predictions, respectively, and while backward induction predictions are robust to small disagreements about the state space, forward induction predictions are not. We also prove that forward induction predictions always admit unique selections a la Weinstein and Yildiz (2007) (also for spaces not satisfying richness) and backward induction predictions do not.`,
-    kw: ['game-theory'],
- },
-    {
     title: `Image Conscious Preferences`,
     authors: [],
-    year: ``,
-    journal: ``,
-    rr: `the Journal of Economic Behavior and Organization`,
-    url: ``,
+    year: `2025`,
+    journal: `the Journal of Economic Behavior and Organization`,
+    rr: ``,
+    volume: 233, 
+    number: 106971,
+    url: `https://www.sciencedirect.com/science/article/pii/S0167268125000915`,
     abs: `An image conscious decision maker (DM) who cares not only about the physical consequences of his actions, but also how his actions are perceived by others. When a DM takes a choice, the resulting image is the set of preferences that are consistent with the observed choice. This paper axiomatizes the behavior of a DM who derives utility directly via consumption and also via the induced image. Because the image depends on what could have been chosen, the DM will display menu-dependent preferences. I consider two models: in the first, the modeler observes two stages of choice—over menus and then from the chosen menu; in the second, only the latter choices are observed. The two models share the same representation but uniqueness is obtained only in the first.`,
     supp: `pdfs/IC_Supp.pdf`,
     kw: ['behavioral', 'axioms'],
  },
-       {
+    {
     title: `A Representation Theorem for Causal Decision Making`,
     authors: [`Halpern, Joseph Y.`],
     year: `2024`,
@@ -70,7 +72,7 @@ var papers = [
     abs: `We show that it is possible to understand and identify a decision maker’s subjective causal judgements by observing her preferences over interventions. Following Pearl [2000], we represent causality using causal models (also called structural equations models), where the world is described by a collection of variables, related by equations. We show that if a preference relation over interventions satisfies certain axioms (related to standard axioms regarding counterfactuals), then we can define (i) a causal model, (ii) a probability capturing the decision-maker’s uncertainty regarding the external factors in the world and (iii) a utility on outcomes such that each intervention is associated with an expected utility and such that intervention A is preferred to B iff the expected utility of A is greater than that of B. In addition, we characterize when the causal model is unique. Thus, our results allow a modeler to test the hypothesis that a decision maker’s preferences are consistent with some causal model and to identify causal judgements from observed behavior.`,
     kw: ['logic', 'axioms'],
  },       
- {
+    {
     title: `Vague Preferences and Contracts`,
     authors: [],
     year: ``,
@@ -80,7 +82,7 @@ var papers = [
     abs: `In this paper, I examine decision making in an environment where payoff relevant contingencies are vague, that is neither absolutely true nor absolutely false. In this model, an agent values acts that are predicated on linguistic statements, rather than an exogenous state-space. I axiomatize a class of preferences under which agent’s beliefs about the degree of truth of contingencies is identified from her choices. I then apply this model to a simple contracting environment wherein contracts must be explicitly constructed using said linguistic statements. I show that different restrictions on the contract writing technology can impart different outcomes. However, under mild conditions, as the cost of contractual complexity vanishes, so do the distortionary effects of vagueness.`,
     kw: ['logic', 'language', 'axioms'],
  },       
- {
+    {
     title: `Hypothetical Expected Utility`,
     authors: [],
     year: ``,
@@ -90,7 +92,7 @@ var papers = [
     abs: `This paper provides a model to analyze and identify a decision maker’s hypothetical reasoning.  Using this model, I show that a DM’s propensity to engage in hypo-thetical thinking is captured exactly by her ability to recognize implications (i.e., toidentify that one hypothesis implies another) and that this later relation is capturedby a DM’s observable behavior.  Thus, this characterization both provides a concretedefinition of (flawed) hypothetical reasoning and, importantly, yields a methodologyto identify these judgments from standard economic data.`,
     kw: ['axioms', 'language'],
  },
-        {
+    {
     title: `Distributional Uncertainty and Persuasion`,
     authors: [],
     year: `2020`,
@@ -100,17 +102,19 @@ var papers = [
     abs: `A Sender designs a signals regarding a state. The distribution of the state is unknown to a Receiver. When information is disclosed many times, accu- mulated signals change the Receiver’s belief about the distribution. Under mild conditions, the Sender’s private information about the distribution is never fully revealed. I then consider the effect of public commitment to a signal structure. Commitment mechanisms need to be unconditional in order to ensure private information revelation. Hence, my analysis in- dicates that the metrics by which policy changes are evaluated should be committed to before any preliminary investigation.`,
     kw: ['game-theory'],
  },
-     {
+    {
     title: `Algebraic Semantics For Relative Truth, Awareness, And Possibility`,
     authors: [],
     year: `2023`,
     journal: `Review of Symbolic Logic`,
+    volume: 17,
+    pages: `154-177`,
     rr: ``,
     url: `https://doi.org/10.1017/S1755020323000308 `,
     abs: `This paper puts forth a class of algebraic structures, relativized Boolean algebras (RBAs), that provide semantics for propositional logic in which truth/validity is only defined relative to a local domain. In particular, the join of an event and its complement need not be the top element. Nonetheless, behavior is locally governed by the laws of propositional logic. By further endowing these structures with operators (akin to the theory of modal Algebras) RBAs serve as models of modal logics in which truth is relative. In particular, modal RBAs provide semantics for various well known awareness logics.`,
     kw: ['logic', 'awareness'],
  },
-     {
+    {
     title: `Unawareness and Risk Taking: The Role of Context`,
     authors: [`Araujo, Felipe A.`],
     year: `2023`,
@@ -123,7 +127,7 @@ var papers = [
     supp: `pdfs/UA_exp_app.pdf`,
     kw: ['awareness', 'exp'],
  },
-     {
+    {
     title: `Disentangling Strict and Weak Choice in Random Expected Utility Models`,
     authors: [],
     year: `2022`,
@@ -135,7 +139,7 @@ var papers = [
     abs: `We put forth a model of random choice in which precise choice frequencies of objects are identified only up to the frequency they are chosen by strict maxi- mization. The resulting primitive is a sub-additive capacity (i.e., set function). We provide simple restrictions on this primitive that are both necessary and sufficient for consistency with a random expected utility function. Thus, our model embeds both deterministic choice, regular random expected utility a la Gul and Pesendorfer (2006), and any combination between. We discuss several economic environments where such a primitive could be observed.`,
     kw: ['axioms'],
  },
-     {
+    {
     title: `Unforeseen Evidence`,
     authors: [],
     year: `2021`,
@@ -147,7 +151,7 @@ var papers = [
     abs: `I propose a normative updating rule, extended Bayesianism, for the incorporation of probabilistic information arising from the process of becoming more aware. Extended Bayesianism generalizes standard Bayesian updating to allow the posterior to reside on richer probability space than the prior. I then provide an observable criterion on prior and posterior beliefs such that they were consistent with extended Bayesianism.`,
     kw: ['logic', 'awareness', 'learning'],
  },
-     {
+    {
     title: `Dynamic Awareness`,
     authors: [`Halpern, Joseph Y.`],
     year: `2020`,
@@ -180,19 +184,20 @@ var papers = [
     abs: `We develop a modal logic to capture partial awareness. The logic has three building blocks: objects, properties, and con- cepts. Properties are unary predicates on objects; concepts are Boolean combinations of properties. An agent can then be partially aware of a concept if she is aware of the concept in the abstract without being aware of the properties that de- fine it. The logic also allows for quantification over objects and properties so that the agent can reason about her own un- awareness. We then apply the logic to contracts. Contracts are syntactic objects that dictate outcomes based on the truth of formulae. The set of feasible contracts is limited by the for- mulae the agents are aware of. We show that when agents are unaware, referencing concepts that agents are only partially aware of can improve welfare.`,
     kw: ['logic', 'awareness'],
  },
-{
+    {
     title: `Reference Dependence and Attitudes Towards Uncertainty`,
     authors: [`Sebastian Lleras, Juan`, `Svoboda, Richard`],
     year: 2018,
     journal: `Economic Theory`,
     rr: ``,
+    volume: 68,
+    pages: `669–699`,
     url: `https://doi.org/10.1007/s00199-018-1138-4`,
     abs: `This paper characterizes a model of reference-dependence, where a state-contingent contract (act) is evaluated by its expected value and its expected gain-loss utility. The expected utility of an act serves as the reference point, hence gains (resp., losses) occur in states where the act provides an outcome that is better (worse) than expected. Beliefs, preferences over outcomes, and a degree of reference-dependence characterize the utility representation, and all are uniquely identified from behavior. Moreover, we establish a link between reference-dependence and attitudes towards uncertainty. In particular, we show within our framework, loss aversion and reference dependence are equivalent to max-min expected utility. Finally, we apply our model to sealed bid auctions where equilibrium bidding strategies are higher bids than risk-neutrality, and hence are more closely aligned with experimental findings.`,
     supp: `pdfs/Asymmetric_Gain-Loss Preferences--Auction.pdf`,
     kw: ['axioms', 'behavioral'],
  },
-
-{
+    {
     title: `Introspective Unawareness and Observable Choice`,
     authors: [],
     year: 2017,
@@ -204,7 +209,6 @@ var papers = [
     abs: `This paper considers a framework in which the decision makers's (DM) knowledge and awareness are explicitly modeled, as is her ability to reason about her own (un)awareness. The DM has a ranking over consumption alternatives that is informed by her epistemic state (i.e., what she knows and what she is aware of), which can serve as a foundation for well known models. The main result is a characterization, via observable choice, of introspective unawareness --a DM who is both unaware of some information and aware she is unaware. In static environments, or when the DM is blind to her own ignorance, the presence of unawareness does not produce any observable choice patterns. However, under dynamic introspective unawareness, the DM will be unwilling to commit to making future choices, even when given the  exibility to write a contingent plan that executes a choice conditional on the realization of uncertain events. This is a behavior that cannot be explained by uncertainty alone (i.e., without appealing to unawareness).`,
     kw: ['logic', 'awareness', 'axioms'],
  },
-
    {
     title: "Context Dependent Beliefs",
     authors: [],
@@ -217,7 +221,6 @@ var papers = [
     abs: `This paper examines a model where the set of available outcomes from which a decision maker must choose alters his perception of uncertainty. Specifically, this paper proposes a set of axioms such that each menu induces a subjective belief over an objective state-space. The decision maker’s preferences are dependent on the realization of the state. The resulting representation is analogous to state-dependent expected utility within each menu; the beliefs are menu-dependent and the utility index is not. Under the interpretation that a menu acts as an informative signal regarding the true state, the paper examines the behavioral restrictions that coincide with different signal structures: elemental (where each element of a menu is a conditionally independent signal) and partitional (where the induced beliefs form a partition of the state space).`,
     kw: ['behavioral', 'axioms'],
   },
-
   {
     title: "Learning the Krepsian State",
     authors: ['Teper, Roee', 'Takeoka, Norio'],
@@ -258,13 +261,18 @@ function createBib(paper){
    title=`\ttitle={${title}},\n`
    author=`\tauthor={${author}},\n`
    year=`\tyear={${year}},\n`
+   let vol = paper['volume'] ? `\tvolume={${paper['volume']}},\n` : ""
+   let num = paper['number'] ? `\tnumber={${paper['number']}},\n` : ""
+   let pages = paper['pages'] ? `\tpages={${paper['pages']}},\n` : ""
    let journal = paper['journal'] ? `\tjournal={${paper['journal']}},\n` : ""
    let url = paper['url'] ? `\turl={${paper['url']}},\n` : ""
    let bib =
-`@${type}{${key}${title}${author}${year}${journal}${url}}`
+`@${type}{${key}${title}${author}${year}${journal}${vol}${num}${url}}`
    
    return bib
 }
+
+
 
 function createPaperElements(paper) {
   let paperLink = document.createElement('a');
@@ -294,26 +302,26 @@ function createPaperElements(paper) {
      authors = `, with ${authors.slice(0, -1).join(', ')} and ${authors.slice(-1)}`; 
    }
 
-  let year = paper['year'] || now
-
   let title = document.createElement('div');
   title.classList.add('paper_title');
-  title.innerHTML = `<b>${paper['title']}</b>${authors}, ${year}. `;
-  paperDiv.appendChild(title);
+  title.innerHTML = `<b>${paper['title']}</b>${authors}`;
 
   if(paper['journal'] || paper['rr'] ){
       let journal = document.createElement('span');
       journal.classList.add('paper_journal');
-      let j = paper['journal'] ? paper['journal'] : paper['rr']
-      // var idx = j.indexOf(',');
-      // idx = idx=-1 ? j.length : idx;
+      let j = paper['journal'] ? paper['journal'] : paper['rr']['j']
       j = '<em>' + j + '</em>';
-      if(paper['rr']){
-        j = '<span class=rr>R\&R</span> at '+j;
-      }
-      journal.innerHTML = j;
+      let rr = paper['rr'] ? `<span class=rr>${paper['rr']['s']} \& Resubmit</span> at ` : ""
+      let vol = paper['volume'] ? `, Vol. ${paper['volume']}` : ""
+      let num = paper['number'] ? `, Number ${paper['number']}` : ""
+      let pages = paper['pages'] ? `, pp. ${paper['pages']}` : ""
+      journal.innerHTML = `<br>${rr}${j}${vol}${num}${pages}`;
       title.appendChild(journal);
   }
+
+  let year = paper['year'] ? `, ${paper['year']}.` : `.`
+  title.insertAdjacentHTML('beforeend', year);
+  paperDiv.appendChild(title);
 
   paper['kw'].forEach(kw => kws.add(kw))
 
