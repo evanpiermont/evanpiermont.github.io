@@ -50,7 +50,7 @@ var papers = [
     kw: ['logic', 'language', 'axioms'],
 },        
     {
-    title: `Image Conscious Preferences`,
+    title: `Image and Norms`,
     authors: [],
     year: `2025`,
     journal: `the Journal of Economic Behavior and Organization`,
