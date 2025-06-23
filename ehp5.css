@@ -45,7 +45,7 @@ a, a:visited, a:link {
     position: fixed;
     width: 100%;
     top: 0;
-    height: 120px;
+    height: 80px;
     padding: 15px 0 15px 0;
     border-bottom: 2px solid var(--font);
     z-index: 2
@@ -58,14 +58,13 @@ a, a:visited, a:link {
 
 #name{
     text-align: center;
-    letter-spacing: .5rem;
-    font-size: 50px;
+    letter-spacing: .4rem;
+    font-size: 35px;
 }
 
 .jumpto {
   flex: 1;
   text-align: center;
-  padding: 10px;
   cursor: pointer;
 /*   border: 1px solid var(--acc); /* Optional: Add a border for visual separation */ */
 }
@@ -93,7 +92,7 @@ a, a:visited, a:link {
 
 .page{
     padding: 130px 100px 30px 100px;
-    min-height: calc(100vh - 180px);
+    min-height: calc(100vh - 160px);
 }
 
 
@@ -101,8 +100,12 @@ a, a:visited, a:link {
   display: flex;
 }
 
+#home > div{
+    margin-top: 20vh;
+}
+
 #left {
-  padding-top: 170px;
+  padding-top: 10px;
   flex: 2; /* Adjust the ratio to make the left side larger */
   padding-right: 50px; /* Add padding for better spacing */
 }
@@ -118,7 +121,7 @@ a, a:visited, a:link {
     background-image: url(IMG/piermont_2.jpg);
     background-size: cover;
     border-radius: 50%;
-    
+    transform: translateY(-20vh)
 }
 
 .sticky_title{
@@ -126,7 +129,8 @@ a, a:visited, a:link {
     width: 100%;
     text-align: center;
     margin-bottom: 50px;
-    position: sticky; top: 150px;
+    position: sticky; 
+    top: 100px;
     padding: 20px 0px 10px 0px;
     border-bottom: 1px solid var(--font2);
     z-index: 1

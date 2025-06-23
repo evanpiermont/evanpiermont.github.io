@@ -7,7 +7,7 @@ var papers = [
     rr: {j: `the American Economic Review`, s: 'Reject'},
     url: `https://arxiv.org/pdf/2304.05142.pdf`,
     abs: `This paper examines how a decision maker might incentivize an expert to reveal novel aspects of the decision problem, expanding the set of contracts from which the decision maker can choose. The chosen contract will determine, along with the resolution of uncertainty, the payoffs to both players. I show that the set of achievable outcomes under any (incentive compatible) mechanism is characterized by a small and tractable class of iterated revelation mechanisms (IRMs). An IRM is a dynamic interaction wherein each round the expert chooses to reveal some novel contingencies and the decision maker proposes a contract that the expert can accept or reject; the IRM ends after rejection or when nothing novel is revealed. I then consider the set of robust IRMs -- those that maximize the worst case outcome across all types of expert -- and show these are characterized by a principle of myopic optimality: at each round, the decision maker maximizes his payoff as if the expert had nothing further to reveal. The set of robust IRMs also delineate the payoffs achievable by any efficient mechanism.` ,
-    kw: ['awareness', 'game-theory'],
+    kw: ['awareness', 'games'],
 },
    {
     title: `Failures of Contingent Thinking`,
@@ -24,10 +24,10 @@ var papers = [
     authors: ['Zuazo-Garin, Peio'],
     year: ``,
     journal: ``,
-    rr: {j: `the Journal of Economic Theory`, s: 'revise'},
+    rr: {j: `the Journal of Economic Theory`, s: 'Revise'},
     url: `https://arxiv.org/abs/2105.06772`,
     abs: `In dynamic settings each economic agent's choices can be revealing of her private information. This elicitation via the rationalization of observable behavior depends each agent's perception of which payoff-relevant contingencies other agents persistently deem as impossible. We formalize the potential heterogeneity of these perceptions as disagreements at higher-orders about the set of payoff states of a dynamic game. We find that apparently negligible disagreements greatly affect how agents interpret information and assess the optimality of subsequent behavior: When knowledge of the state space is only 'almost common', strategic uncertainty may be greater when choices are rationalized than when they are not--forward and backward induction predictions, respectively, and while backward induction predictions are robust to small disagreements about the state space, forward induction predictions are not. We also prove that forward induction predictions always admit unique selections a la Weinstein and Yildiz (2007) (also for spaces not satisfying richness) and backward induction predictions do not.`,
-    kw: ['game-theory'],
+    kw: ['games'],
  },
     {
     title: `Modeling the Modeler: A Normative Theory of Experimental Design`,
@@ -39,6 +39,16 @@ var papers = [
     abs: `We consider an analyst whose goal is to identify a subject's utility function through revealed preference analysis. We argue the analyst's preference about which experiments to run should adhere to three normative principles: The first, Structural Invariance, requires that the value of a choice experiment only depends on what the experiment may potentially reveal. The second, Identification Separability, demands that the value of identification is independent of what would have been counterfactually identified had the subject had a different utility. Finally, Information Monotonicity asks that more informative experiments are preferred. We provide a representation theorem, showing that these three principles characterize Expected Identification Value maximization, a functional form that unifies several theories of experimental design. We also study several special cases and discuss potential applications.`,
     kw: ['exp', 'axioms'],
  },
+     {
+    title: `Do You Know What I Mean? A Syntactic Representation for Differential Bounded Awareness`,
+    authors: ['Guerdjikova, Ani', 'Quiggin, John'],
+    year: ``,
+    journal: ``,
+    rr: ``,
+    url: `https://arxiv.org/pdf/2506.16901`,
+    abs: `Without the assumption of complete, shared awareness, it is necessary to consider communication between agents who may entertain different representations of the world. A syntactic (language-based) approach provides powerful tools to address this problem. In this paper, we define translation operators between two languages which provide a ''best approximation'' for the meaning of propositions in the target language subject to its expressive power. We show that, in general, the translation operators preserve some, but not all, logical operations. We derive necessary and sufficient conditions for the existence of a joint state space and a joint language, in which the subjective state spaces of each agent, and their individual languages, may be embedded. This approach allows us to compare languages with respect to their expressiveness and thus, with respect to the properties of the associated state space.`,
+    kw: ['awareness', 'language', `logic`],
+},
     {
     title: `Coarse Descriptions and Cautious Preferences`,
     authors: ['Pivato, Marcus'],
@@ -100,7 +110,7 @@ var papers = [
     url: ``,
     rr: ``,
     abs: `A Sender designs a signals regarding a state. The distribution of the state is unknown to a Receiver. When information is disclosed many times, accu- mulated signals change the Receiver’s belief about the distribution. Under mild conditions, the Sender’s private information about the distribution is never fully revealed. I then consider the effect of public commitment to a signal structure. Commitment mechanisms need to be unconditional in order to ensure private information revelation. Hence, my analysis in- dicates that the metrics by which policy changes are evaluated should be committed to before any preliminary investigation.`,
-    kw: ['game-theory'],
+    kw: ['games'],
  },
     {
     title: `Algebraic Semantics For Relative Truth, Awareness, And Possibility`,
@@ -290,7 +300,7 @@ function createPaperElements(paper) {
     paper['kw'].push('R\&R')
    } else {
     type = wp
-    paper['kw'].push('working-paper')
+    paper['kw'].push('mimeo')
    }
 
   authors = paper['authors']
