@@ -1,3 +1,17 @@
+var coauthors = {
+  "Araujo, Felipe A.": "https://www.araujofa.com/",
+  "Guerdjikova, Ani": "https://sites.google.com/site/aniguerdjikova/home",
+  "Halpern, Joseph Y.": "https://www.cs.cornell.edu/home/halpern/",
+  "Payró, Fernando": "https://sites.google.com/site/ferpayrochew/home",
+  "Pivato, Marcus": "https://sites.google.com/site/marcuspivato/home",
+  "Quiggin, John": "https://johnquiggin.com/",
+  "Sebastian Lleras, Juan": "",
+  "Svoboda, Richard": "",
+  "Takeoka, Norio": "https://sites.google.com/r.hit-u.ac.jp/noriotakeoka/",
+  "Teper, Roee": "",
+  "Zuazo-Garin, Peio": "https://sites.google.com/view/peiozuazo-garin/home"
+};
+
 var papers = [
     {
     title: `Iterated Revelation: How to Incentivize Experts to Reveal Novel Actions`,
@@ -291,6 +305,8 @@ function createPaperElements(paper) {
   paperDiv.classList.add('paper');
   paperLink.appendChild(paperDiv);
   paperLink.href = paper['url'];
+  paperLink.target = "_blank";
+
 
    let type
    if (paper['journal']){
@@ -303,18 +319,50 @@ function createPaperElements(paper) {
     paper['kw'].push('mimeo')
    }
 
-  authors = paper['authors']
-  if (authors.length === 0) {
-    authors = "";
-   }else if(authors.length === 1){
-      authors = `, with ${authors}`
-   }else{
-     authors = `, with ${authors.slice(0, -1).join(', ')} and ${authors.slice(-1)}`; 
+   let authors = paper['authors'];
+   let authorContainer = document.createElement('span');
+
+   if (authors.length === 0) {
+      // No authors
+   } else {
+      let authorPieces = authors.map((name) => {
+         let site = coauthors[name];
+         if (site) {
+            let button = document.createElement('button');
+            button.textContent = name;
+            button.classList.add('author_btn');
+            button.onclick = function(event) {
+               event.preventDefault();  
+               event.stopPropagation();
+               window.open(site, '_blank');
+            };
+            return button;
+         } else {
+            let span = document.createElement('span');
+            span.textContent = name;
+            return span;
+         }
+      });
+
+      if (authorPieces.length === 1) {
+         authorContainer.append(' with ', authorPieces[0]);
+      } else if (authorPieces.length > 1) {
+         authorContainer.append(' with ');
+         for (let i = 0; i < authorPieces.length; i++) {
+            if (i > 0 && i === authorPieces.length - 1) {
+               authorContainer.append(' and ');
+            } else if (i > 0) {
+               authorContainer.append(', ');
+            }
+            authorContainer.append(authorPieces[i]);
+         }
+      }
    }
 
-  let title = document.createElement('div');
-  title.classList.add('paper_title');
-  title.innerHTML = `<b>${paper['title']}</b>${authors}`;
+   let title = document.createElement('div');
+   title.classList.add('paper_title');
+   title.innerHTML = `<b>${paper['title']}</b>`;
+   title.append(authorContainer);
 
   if(paper['journal'] || paper['rr'] ){
       let journal = document.createElement('span');
