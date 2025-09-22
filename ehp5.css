@@ -159,6 +159,7 @@ a, a:visited, a:link {
 }
 
 .paper{
+    position: relative;
     font-size: 16px;
     background-color: var(--bg);
     border-radius: 5px;
@@ -176,16 +177,17 @@ a, a:visited, a:link {
     opacity: 0;
 }
 
-.paper_kw{
- position: fixed;
- top: 120px;
- font-size: 10px;
- color: var(--font2);
- z-index: 2;
- opacity: 0;
+.paper_kw {
+  position: absolute;   /* taken out of flow (won't increase parent height) */
+  right: 10px;          /* tune this gap from the right edge */
+  bottom: 5px;         /* tune this gap from the bottom edge */
+  font-size: 10px;
+  color: var(--font2);
+  opacity: .5;
+  white-space: nowrap;  /* keep it on one line */
 }
 
-.paper_link:hover > .paper_kw{
+.paper:hover > .paper_kw{
     opacity: 1;
 }
 
@@ -288,7 +290,8 @@ a.social{
       background-color: var(--acc);
       border: 3px solid var(--font2);
       color: var(--acc2);
-      font-size: 30px;
+      font-size: 15px;
+      white-space: pre-wrap;
       z-index: 10;
     }
 

@@ -31,6 +31,7 @@ var papers = [
     rr: {j: `Theoretical Economics`, s: 'Revise'},
     url: `https://arxiv.org/pdf/2007.07703.pdf`,
     abs: `In this paper, we provide a theoretical framework to analyze an agent who misinterprets or misperceives the true decision problem she faces. Within this framework, we show that a wide range of behavior observed in experimental settings manifest as failures to perceive implications, in other words, to properly account for the logical relationships between various payoff relevant contingencies. We present behavioral characterizations corresponding to several benchmarks of logical sophistication and show how it is possible to identify which implications the agent fails to perceive. Thus, our framework delivers both a methodology for assessing an agent's level of contingent thinking and a strategy for identifying her beliefs in the absence full rationality.`,
+    supp: `pdfs/FCT-SUPP.pdf`,
     kw: ['logic', 'language', 'axioms'],
  }, 
    {
@@ -434,10 +435,10 @@ let bib_b = document.createElement('span');
 
 
  if(keywords){
-    let k = document.createElement('div');
+    let k = document.createElement('span');
     k.classList.add('paper_kw');
     k.innerHTML = keywords;
-    paperLink.appendChild(k);
+    paperDiv.appendChild(k);
  }
 
   
@@ -521,7 +522,7 @@ function flashMessage(msg) {
     flashMessage.style.display = 'block';
     setTimeout(function () {
       flashMessage.style.display = 'none';
-    }, 1000);
+    }, 1500);
   }
 
 
@@ -541,7 +542,7 @@ init = function() {
       bibButton.addEventListener('click', function (e) {
         var bibtexData = this.getAttribute('data-bibtex');
         copyto(bibtexData)
-        flashMessage(`Copied: ${bibtexData}`)
+        flashMessage(`Copied: \n\n ${bibtexData}`)
         e.preventDefault()
      });
    });
