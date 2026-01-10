@@ -18,7 +18,7 @@ var papers = [
     authors: [],
     year: ``,
     journal: ``,
-    rr: {j: `the American Economic Review`, s: 'Reject'},
+    rr: {j: `the American Economic Review`, s: 'Revise'},
     url: `https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5364951`,
     abs: `This paper examines how a decision maker might incentivize an expert to reveal novel aspects of the decision problem, expanding the set of contracts from which the decision maker can choose. The chosen contract will determine, along with the resolution of uncertainty, the payoffs to both players. I show that the set of achievable outcomes under any (incentive compatible) mechanism is characterized by a small and tractable class of iterated revelation mechanisms (IRMs). An IRM is a dynamic interaction wherein each round the expert chooses to reveal some novel contingencies and the decision maker proposes a contract that the expert can accept or reject; the IRM ends after rejection or when nothing novel is revealed. I then consider the set of robust IRMs -- those that maximize the worst case outcome across all types of expert -- and show these are characterized by a principle of myopic optimality: at each round, the decision maker maximizes his payoff as if the expert had nothing further to reveal. The set of robust IRMs also delineate the payoffs achievable by any efficient mechanism.` ,
     kw: ['awareness', 'games'],
