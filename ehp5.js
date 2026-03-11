@@ -9,6 +9,7 @@ var coauthors = {
   "Svoboda, Richard": "",
   "Takeoka, Norio": "https://sites.google.com/r.hit-u.ac.jp/noriotakeoka/",
   "Teper, Roee": "",
+  "Vierø, Marie-Louise": "https://sites.google.com/view/marie-louise",
   "Zuazo-Garin, Peio": "https://sites.google.com/view/peiozuazo-garin/home"
 };
 
@@ -64,6 +65,16 @@ var papers = [
     url: `https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5364961`,
     abs: `Without the assumption of complete, shared awareness, it is necessary to consider communication between agents who may entertain different representations of the world. A syntactic (language-based) approach provides powerful tools to address this problem. In this paper, we define translation operators between two languages which provide a ''best approximation'' for the meaning of propositions in the target language subject to its expressive power. We show that, in general, the translation operators preserve some, but not all, logical operations. We derive necessary and sufficient conditions for the existence of a joint state space and a joint language, in which the subjective state spaces of each agent, and their individual languages, may be embedded. This approach allows us to compare languages with respect to their expressiveness and thus, with respect to the properties of the associated state space.`,
     kw: ['awareness', 'language', `logic`],
+},
+    {
+    title: `Unintended Consequences: Updating Causal Models`,
+    authors: [`Halpern, Joseph Y.`, `Vierø, Marie-Louise`],
+    year: ``,
+    journal: ``,
+    rr: ``,
+    url: `https://arxiv.org/abs/2603.09387`,
+    abs: `We examine how causal beliefs affect an agent's choices and how feedback on those choices leads to updated causal beliefs. Building on the structural-equations framework for modeling causality, we first examine the general problem of updating causal beliefs in the face of novel (and possibly inexplicable) data. We model an agent who is uncertain of the true causal model, and therefore entertains a probabilistic belief over the set of possible models. We then consider how causal beliefs influence choices by building a model of agency and utility on top of the usual structural-equations framework. Using these two components, we propose a notion of steady state, where the feedback received from an agent's optimal action, given her current beliefs about the true causal model, can be rationalized by those beliefs. `,
+    kw: ['awareness', 'logic', 'learning'],
 },
     {
     title: `Coarse Descriptions and Cautious Preferences`,
