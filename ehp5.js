@@ -309,6 +309,25 @@ function createBib(paper){
    return bib
 }
 
+function createAuthorButton(name){
+      let site = coauthors[name]
+      if (site) {
+      let button = document.createElement('button');
+          button.textContent = name;
+          button.classList.add('author_btn');
+          button.onclick = function(event) {
+          event.preventDefault();  
+          event.stopPropagation();
+          window.open(site, '_blank');
+            };
+            return button;
+         } else {
+            let span = document.createElement('span');
+            span.textContent = name;
+            return span;
+         }
+};
+
 
 
 function createPaperElements(paper) {
@@ -338,24 +357,7 @@ function createPaperElements(paper) {
    if (authors.length === 0) {
       // No authors
    } else {
-      let authorPieces = authors.map((name) => {
-         let site = coauthors[name];
-         if (site) {
-            let button = document.createElement('button');
-            button.textContent = name;
-            button.classList.add('author_btn');
-            button.onclick = function(event) {
-               event.preventDefault();  
-               event.stopPropagation();
-               window.open(site, '_blank');
-            };
-            return button;
-         } else {
-            let span = document.createElement('span');
-            span.textContent = name;
-            return span;
-         }
-      });
+      let authorPieces = authors.map(createAuthorButton);
 
       if (authorPieces.length === 1) {
          authorContainer.append(' with ', authorPieces[0]);
@@ -540,7 +542,10 @@ function flashMessage(msg) {
 
 
 init = function() {
-   appendPapersToDOM();
+  appendPapersToDOM();
+
+  let but = createAuthorButton('Payró, Fernando')
+  document.getElementById('fer').append(but)
 
   absElements.forEach(function(absElement) {
     absElement.addEventListener('click', function(e) {

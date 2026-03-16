@@ -45,8 +45,8 @@ a, a:visited, a:link {
     position: fixed;
     width: 100%;
     top: 0;
-    height: 80px;
-    padding: 15px 0 15px 0;
+    height: 85px;
+    padding: 10px 0 20px 0;
     border-bottom: 2px solid var(--font);
     z-index: 2
 }
@@ -58,7 +58,7 @@ a, a:visited, a:link {
 
 #name{
     text-align: center;
-    letter-spacing: .4rem;
+    letter-spacing: .5rem;
     font-size: 35px;
 }
 
@@ -79,7 +79,7 @@ a, a:visited, a:link {
 
 .icon{
     transform: translateY(3px);
-    height: 20px;
+    height: 25px;
     stroke: var(--acc2);
     margin-right: 3px;
     opacity: .7;
@@ -88,7 +88,7 @@ a, a:visited, a:link {
 
 
 
-#homei,#tunesi,#teacingi,#absi, #suppi, #bibi{
+#homei,#bsei,#tunesi,#teacingi,#absi, #suppi, #bibi{
     fill: var(--acc2);
 }
 
@@ -146,7 +146,8 @@ a, a:visited, a:link {
     top: 100px;
     padding: 20px 0px 10px 0px;
     border-bottom: 1px solid var(--font2);
-    z-index: 1
+    z-index: 1;
+    background-color: var(--bg);
 
 }
 
@@ -155,7 +156,7 @@ a, a:visited, a:link {
 }
 
 #contact, #contact .sticky_title{
-    background-color: var(--bg)
+    background-color: var(--bg2)
 }
 
 .paper{
@@ -253,6 +254,22 @@ a, a:visited, a:link {
     display: none;
 }
 
+#bse-photos {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    gap: 8px;
+    margin: 50px 0 70px 0;
+    justify-content: center;  /* centers the row */
+
+}
+
+#bse-photos img {
+    height: 17vw;     /* responsive shared height */
+    width: auto;      /* preserve aspect ratio */
+    flex: 0 0 auto;   /* prevent stretching */
+}
+
 a.social{
     background-color: var(--bg2);
     padding: 3px 10px 3px 10px;
@@ -328,6 +345,8 @@ a.social{
     
     #name{
         font-size: 25px;
+        letter-spacing: .1em;
+        margin-bottom:5px;
     }
     
     #right{
@@ -343,6 +362,15 @@ a.social{
     top: 100px;
     font-size: 20px;
     }
+    
+    #bse-photos {
+    display: none;
+}
+    
+    #nav_bse{
+        font-size: 10px;
+    }
+    
         
     .page{
     padding: 70px 20px 20px 20px;
