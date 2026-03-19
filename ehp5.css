@@ -141,7 +141,7 @@ a, a:visited, a:link {
     font-size: 30px;
     width: 100%;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     position: sticky; 
     top: 100px;
     padding: 20px 0px 10px 0px;
@@ -296,8 +296,9 @@ a.social:hover{
 }
 
 #socials {
-      display: flex;
-      justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
     }
 
 #github{
@@ -353,6 +354,9 @@ a.social:hover{
     color: 1f99fe;
 }
 
+.short-text { display: none; }
+
+
 @media only screen and (max-width: 768px) {
     
     #name{
@@ -378,10 +382,6 @@ a.social:hover{
     #bse-photos {
     display: none;
 }
-    
-    #nav_bse{
-        font-size: 10px;
-    }
     
         
     .page{
@@ -432,5 +432,18 @@ a.social:hover{
         align-items: center;
         width: 100%;
     }
+    
+    #contact{
+background-color: var(--bg2);
+background-image: none;
+}
+    
+ .full-text{ 
+     display: none; 
+}
+    
+  .short-text { 
+      display: inline-block; 
+  }
 
 }
