@@ -69,8 +69,8 @@ var papers = [
     {
     title: `Unintended Consequences: Updating Causal Models`,
     authors: [`Halpern, Joseph Y.`, `Vierø, Marie-Louise`],
-    year: ``,
-    journal: ``,
+    year: `2026`,
+    journal: `Proceedings of the 35th International Joint Conferences on Artificial Intelligence (IJCAI 26)`,
     rr: ``,
     url: `https://arxiv.org/abs/2603.09387`,
     abs: `We examine how causal beliefs affect an agent's choices and how feedback on those choices leads to updated causal beliefs. Building on the structural-equations framework for modeling causality, we first examine the general problem of updating causal beliefs in the face of novel (and possibly inexplicable) data. We model an agent who is uncertain of the true causal model, and therefore entertains a probabilistic belief over the set of possible models. We then consider how causal beliefs influence choices by building a model of agency and utility on top of the usual structural-equations framework. Using these two components, we propose a notion of steady state, where the feedback received from an agent's optimal action, given her current beliefs about the true causal model, can be rationalized by those beliefs. `,
@@ -103,7 +103,7 @@ var papers = [
     title: `A Representation Theorem for Causal Decision Making`,
     authors: [`Halpern, Joseph Y.`],
     year: `2024`,
-    journal: `21st International Conference on Principles of Knowledge Representation and Reasoning`,
+    journal: `Proceedings of the 21st International Conference on Principles of Knowledge Representation and Reasoning (KR2024)`,
     rr: ``,
     url: `https://arxiv.org/abs/2401.10937`,
     abs: `We show that it is possible to understand and identify a decision maker’s subjective causal judgements by observing her preferences over interventions. Following Pearl [2000], we represent causality using causal models (also called structural equations models), where the world is described by a collection of variables, related by equations. We show that if a preference relation over interventions satisfies certain axioms (related to standard axioms regarding counterfactuals), then we can define (i) a causal model, (ii) a probability capturing the decision-maker’s uncertainty regarding the external factors in the world and (iii) a utility on outcomes such that each intervention is associated with an expected utility and such that intervention A is preferred to B iff the expected utility of A is greater than that of B. In addition, we characterize when the causal model is unique. Thus, our results allow a modeler to test the hypothesis that a decision maker’s preferences are consistent with some causal model and to identify causal judgements from observed behavior.`,
@@ -192,7 +192,7 @@ var papers = [
     title: `Dynamic Awareness`,
     authors: [`Halpern, Joseph Y.`],
     year: `2020`,
-    journal: `17th International Conference on Principles of Knowledge Representation and Reasoning (KR2020)`,
+    journal: `Proceedings of the 17th International Conference on Principles of Knowledge Representation and Reasoning (KR2020)`,
     rr: ``,
     url: `https://arxiv.org/abs/2007.02823`,
     abs: `We investigate how to model the beliefs of an agent who becomes more aware. We use the framework of Halpern and Rego (2013) by adding probability, and define a notion of a model transition that describes constraints on how, if an agent becomes aware of a new formula ϕ in state s of a model M, she transitions to state s∗ in a model M∗. We then discuss how such a model can be applied to information disclosure.`,
@@ -284,7 +284,7 @@ var now = new Date().getFullYear()
 function createBib(paper){
    let stop = ['a', 'the', 'an']
    let author = paper['authors']
-   author.push('Piermont., Evan');
+   author.push('Piermont, Evan');
    author = author.sort().join(' and ')
    title = paper['title']
    let fw = title.split(' ')[0].toLowerCase()
