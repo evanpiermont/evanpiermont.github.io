@@ -81,16 +81,21 @@ a, a:visited, a:link {
     transform: translateY(3px);
     height: 25px;
     stroke: var(--acc2);
+    fill: none;
     margin-right: 3px;
     opacity: .7;
 }
 
-
-
-
-#homei,#bsei,#tunesi,#teacingi,#absi, #suppi, #bibi{
+#homei,#bsei,#tunesi,#teacingi{
     fill: var(--acc2);
 }
+
+.filled-icon{
+    fill: var(--acc2);
+}
+
+
+
 
 #nav_tunes{
     letter-spacing: .1em
@@ -200,23 +205,36 @@ background-size: cover;
 }
 
 .paper_buts .icon{
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
 }
 
-.filter_button, .paper_buts span, .paper_buts a{
+.filter_button{
     cursor: pointer;
     background-color: var(--bg2);
-    padding: 3px 6px 3px 6px;
+    padding: 6px 6px 6px 6px;
     border-radius: 10px;
     color: var(--font2);
     border: 1px solid var(--acc2);
     margin-right: 15px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .paper_buts{
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.paper_buts span, .paper_buts a{
+  background: var(--acc);       /* tweak to taste */
+  color: var(font);
+  border: none;
+  border-radius: 4px;
+  padding: 3px 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  z-index: 999;
+  margin: 0 0 0 10px;
 }
 
 .author_btn {
@@ -230,14 +248,17 @@ background-size: cover;
   z-index: 999;
 }
 
-.author_btn:hover {
+.author_btn:hover, .paper_buts span:hover, .paper_buts a:hover{
   background: var(--acc2); 
   color: aliceblue
 }
 
-.paper_buts span:hover, .paper_buts a:hover {
-  background-color: var(--acc);
+.paper_buts span:hover .icon,
+.paper_buts a:hover .icon{
+    stroke: var(--acc);
+    fill: var(--acc);
 }
+
 
 
 #filter_buttons .filter_button:hover {
@@ -396,8 +417,8 @@ a.social:hover{
 }
     
    .paper_buts .icon{
-    height: 18px;
-    width: 18px;
+    height: 15px;
+    width: 15px;
 }
     
   .paper_buts{
