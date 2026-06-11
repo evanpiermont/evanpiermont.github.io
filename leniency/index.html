@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leniency Relation Explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Leniency Relation Explorer</h1>
+
+  <div class="controls">
+    <label for="elements">Elements (comma separated):</label>
+    <input type="text" id="elements" value="a,b,c">
+    <button id="apply">Apply</button>
+  </div>
+
+  <div class="tables">
+    <div class="table-block">
+      <h2>&#8658;</h2>
+      <table id="left"></table>
+    </div>
+    <div class="table-block">
+      <h2>&#8594;</h2>
+      <table id="right"></table>
+    </div>
+  </div>
+
+  <div class="state-space">
+    <h2>Canonical state space (W = A)</h2>
+    <table id="statespace"></table>
+    <div class="legend">
+      <span class="legend-item"><span class="swatch v"></span> v(a) — verified</span>
+      <span class="legend-item"><span class="swatch f"></span> f(a) — falsified</span>
+      <span class="legend-item"><span class="swatch vf"></span> both</span>
+      <span class="legend-item"><span class="swatch n"></span> neither</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
