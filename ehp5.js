@@ -56,7 +56,7 @@ var papers = [
     rr: ``,
     url: `https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6153986`,
     abs: `We consider an analyst whose goal is to identify a subject's utility function through revealed preference analysis. We argue the analyst's preference about which experiments to run should adhere to three normative principles: The first, Structural Invariance, requires that the value of a choice experiment only depends on what the experiment may potentially reveal. The second, Identification Separability, demands that the value of identification is independent of what would have been counterfactually identified had the subject had a different utility. Finally, Information Monotonicity asks that more informative experiments are preferred. We provide a representation theorem, showing that these three principles characterize Expected Identification Value maximization, a functional form that unifies several theories of experimental design. We also study several special cases and discuss potential applications.`,
-    supp: `pdfs/exp_supp.pdf`,
+    supp: `pdfs/EED_supp.pdf`,
     slides: `pdfs/EED.pdf`,
     kw: ['exp', 'axioms'],
  },
