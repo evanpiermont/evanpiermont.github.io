@@ -589,8 +589,36 @@ function flashMessage(msg) {
 
 
 
+function initLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const photos = document.querySelectorAll('#bse-photos img');
+
+  photos.forEach(function (photo) {
+    photo.addEventListener('click', function () {
+      lightboxImg.src = this.src;
+      lightboxImg.alt = this.alt;
+      lightboxCaption.textContent = this.alt || '';
+      lightboxCaption.style.display = this.alt ? 'block' : 'none';
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', function () {
+    lightbox.classList.remove('active');
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      lightbox.classList.remove('active');
+    }
+  });
+}
+
 init = function() {
   appendPapersToDOM();
+  initLightbox();
 
   let but = createAuthorButton('Payró, Fernando')
   document.getElementById('fer').append(but)

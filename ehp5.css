@@ -286,7 +286,9 @@ background-size: cover;
     width: 100%;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
+    row-gap: 4px;
     margin: 50px 0 70px 0;
     justify-content: center;  /* centers the row */
 
@@ -296,6 +298,52 @@ background-size: cover;
     height: 17vw;     /* responsive shared height */
     width: auto;      /* preserve aspect ratio */
     flex: 0 0 auto;   /* prevent stretching */
+    cursor: pointer;
+    transition: opacity .15s ease;
+}
+
+#bse-photos img:hover {
+    opacity: .85;
+}
+
+.row-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+    z-index: 20;
+    cursor: zoom-out;
+    align-items: center;
+    justify-content: center;
+}
+
+#lightbox.active {
+    display: flex;
+    flex-direction: column;
+}
+
+#lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+#lightbox-caption {
+    margin-top: 15px;
+    color: var(--bg);
+    font-size: 16px;
+    text-align: center;
+    max-width: 80vw;
+    cursor: default;
 }
 
 a.social{
