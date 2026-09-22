@@ -5,6 +5,7 @@
 
 var absElements = []
 var bibElements = []
+var leanElements = []
 var kws = new Set()
 var activeFilter = new Set()
 
@@ -175,6 +176,38 @@ let slides_b = document.createElement('a');
 buttons.prepend(slides_b);
 }
 
+if(paper['lean']){
+
+let lean_b = document.createElement('span');
+  lean_b.classList.add('lean_button');
+  lean_b.innerHTML = `
+<svg class="icon filled-icon" viewBox="0 0 24 24">
+  <use href="#leani" />
+</svg> lean proof`
+
+let lean_menu = document.createElement('div');
+  lean_menu.classList.add('lean_menu');
+
+let lean_raw = document.createElement('a');
+  lean_raw.classList.add('lean_menu_item');
+  lean_raw.href = paper['lean'];
+  lean_raw.target = "_blank";
+  lean_raw.textContent = "raw files";
+
+let lean_live = document.createElement('a');
+  lean_live.classList.add('lean_menu_item');
+  lean_live.href = `https://live.lean-lang.org/#url=${encodeURIComponent(paper['lean'])}`;
+  lean_live.target = "_blank";
+  lean_live.textContent = "interactive prover";
+
+lean_menu.append(lean_raw, lean_live);
+lean_b.appendChild(lean_menu);
+
+leanElements.push({btn: lean_b, menu: lean_menu});
+
+buttons.appendChild(lean_b);
+}
+
 
 let bib_b = document.createElement('span');
   bib_b.classList.add('bib_button');
@@ -334,6 +367,40 @@ init = function() {
         e.preventDefault()
      });
    });
+
+  leanElements.forEach(function (lean) {
+      lean.btn.addEventListener('click', function (e) {
+        if (e.target.closest('.lean_menu')) { return; }
+        e.preventDefault();
+        e.stopPropagation();
+        leanElements.forEach(function (other) {
+          if (other.menu !== lean.menu) { other.menu.classList.remove('open'); }
+        });
+        lean.menu.classList.toggle('open');
+      });
+
+      lean.menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          lean.menu.classList.remove('open');
+        });
+      });
+   });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.lean_button')) {
+      var wasOpen = leanElements.some(function (lean) {
+        return lean.menu.classList.contains('open');
+      });
+      if (wasOpen) {
+        leanElements.forEach(function (lean) {
+          lean.menu.classList.remove('open');
+        });
+        // This click is just dismissing the menu -- don't also let it
+        // activate whatever link (e.g. the paper's own url) it landed on.
+        e.preventDefault();
+      }
+    }
+  });
 
 };
 

@@ -2,9 +2,17 @@
 //
 // Edit this file to add, remove, or update papers. Each entry is a plain
 // object; only `title`, `authors`, `year`, `journal`, `rr`, `url`, and `abs`
-// are commonly used, but `supp`, `slides`, `volume`, `number`, and `pages`
-// are also recognized when present. `kw` is the list of keyword tags used
-// for filtering on the site.
+// are commonly used, but `supp`, `slides`, `lean`, `volume`, `number`, and
+// `pages` are also recognized when present. `kw` is the list of keyword
+// tags used for filtering on the site.
+//
+// `lean` is the raw URL to a Lean/mathlib formalization of the paper's
+// results -- typically a raw.githubusercontent.com link to the .lean file
+// (or a repo folder of them). The "lean proof" button uses this URL two
+// ways: directly, as the "raw files" link, and encoded and appended to
+// https://live.lean-lang.org/#url= for the "interactive prover" link, so
+// there's no need to construct the live.lean-lang.org URL by hand. Leave
+// `lean` unset for papers with no formalization.
 //
 // This file must load before ehp5.js, which reads the `papers` variable
 // defined here.
@@ -31,6 +39,7 @@ var papers = [
     abs: `In this paper, we provide a theoretical framework to analyze an agent who misinterprets or misperceives the true decision problem she faces. Within this framework, we show that a wide range of behavior observed in experimental settings manifest as failures to perceive implications, in other words, to properly account for the logical relationships between various payoff relevant contingencies. We present behavioral characterizations corresponding to several benchmarks of logical sophistication and show how it is possible to identify which implications the agent fails to perceive. Thus, our framework delivers both a methodology for assessing an agent's level of contingent thinking and a strategy for identifying her beliefs in the absence full rationality.`,
     supp: `pdfs/FCT-SUPP.pdf`,
     slides: ``,
+    lean: `https://raw.githubusercontent.com/evanpiermont/proofs/refs/heads/main/Proofs/FCT.lean`,
     kw: ['logic', 'language', 'axioms'],
  },
    {

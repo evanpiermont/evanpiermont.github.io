@@ -147,11 +147,11 @@ a, a:visited, a:link {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
-    position: sticky; 
+    position: sticky;
     top: 100px;
     padding: 20px 0px 10px 0px;
     border-bottom: 1px solid var(--font2);
-    z-index: 1;
+    z-index: 2;
     background-color: var(--bg);
 
 }
@@ -177,6 +177,7 @@ background-size: cover;
     background-color: var(--bg);
     border-radius: 5px;
     padding: 10px;
+    padding-bottom: 15px;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -234,7 +235,7 @@ background-size: cover;
   cursor: pointer;
   font-size: 0.9em;
   z-index: 999;
-  margin: 0 0 0 10px;
+  margin: 5px;
 }
 
 .author_btn {
@@ -426,7 +427,7 @@ a.social:hover{
 .short-text { display: none; }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     
     #name{
         font-size: 25px;
@@ -461,7 +462,7 @@ a.social:hover{
     
     .paper{
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 14px;
 }
     
    .paper_buts .icon{
@@ -473,8 +474,8 @@ a.social:hover{
     margin-top: 5px;
     margin-left: -5px;
     padding-left: 0px;
-    padding-bottom: 15px;
-    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
     
     .filter_button{
@@ -482,13 +483,8 @@ a.social:hover{
     }
     
    .paper_buts span, .paper_buts a{
-    padding: 3px 7px 3px 2px;
-    border-radius: 10px;
-    color: var(--font2);
-    border: 1px solid var(--acc2);
     margin-right: 6px;
 }
-    
     
     .social{
         margin-top: 15px;
@@ -511,8 +507,66 @@ background-image: none;
      display: none; 
 }
     
-  .short-text { 
-      display: inline-block; 
+  .short-text {
+      display: inline-block;
   }
 
+}
+
+/* Lean proof button: opens a small dropdown with "raw files" and
+   "interactive prover" links, instead of navigating directly.
+
+   Note on z-index: `.paper_buts span, .paper_buts a` sets z-index: 999,
+   which was harmless while every button in that row was non-positioned
+   (z-index only affects positioned elements). `.lean_button` is the first
+   one that needs `position: relative` (to anchor the dropdown), so it's
+   also the first to actually pick up that 999 -- which is far above
+   #header (2) and .sticky_title (1), so the button/menu painted over the
+   page's own header once scrolled underneath it. The override below pins
+   `.lean_button` to a small, explicit z-index that still clears ordinary
+   page content but stays below the site's fixed/sticky chrome. */
+
+.paper_buts .lean_button{
+    z-index: 1;
+}
+
+.lean_button{
+    position: relative;
+}
+
+.lean_menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 6px;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--bg2);
+    border: 1px solid var(--acc2);
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.lean_menu.open{
+    display: flex;
+}
+
+/* Explicit color (not just inherited) so that hovering one menu item
+   doesn't also lighten its sibling: hovering a link always puts its
+   ancestors into :hover too, so `.paper_buts span:hover` (the "lean
+   proof" toggle button) fires and its `color: aliceblue` would otherwise
+   inherit down into both items, not just the one under the cursor. */
+.lean_menu .lean_menu_item{
+    display: block;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--font);
+    background: var(--acc);
+}
+
+.lean_menu .lean_menu_item:hover{
+    background: var(--acc2);
+    color: aliceblue;
 }
