@@ -156,6 +156,22 @@ a, a:visited, a:link {
 
 }
 
+/* R&Rs / Publications / Working Papers: greyed out until scrolled into,
+   then highlighted -- see queueActiveSectionUpdate() in ehp5.js. */
+.section_label{
+    color: var(--font2);
+    opacity: .35;
+    font-weight: normal;
+    cursor: pointer;
+    transition: opacity .2s ease, color .2s ease;
+}
+
+.section_label.active{
+    color: var(--acc2);
+    opacity: 1;
+    font-weight: bold;
+}
+
 #research, #research .sticky_title{
     background-color: var(--bg2)
 }

@@ -277,12 +277,13 @@ function applyFilter() {
         });
     }
     document.getElementById("nav_research").click();
+    queueActiveSectionUpdate();
 }
 
 function appendPapersToDOM() {
-  var pub = document.getElementById('pub'); 
-  var wp = document.getElementById('wp'); 
-  var rr = document.getElementById('wp'); 
+  var pub = document.getElementById('pub');
+  var wp = document.getElementById('wp');
+  var rr = document.getElementById('rr');
 
 
   papers.forEach(function (paper) {
@@ -294,6 +295,65 @@ function appendPapersToDOM() {
     createFilterButton(kw)
   });
 
+}
+
+// Scroll-spy for the "R&Rs / Publications / Working Papers" sticky title:
+// highlights whichever section the reader has scrolled down into. The
+// activation line sits below the sticky title's own bottom edge, padded by
+// SECTION_VISIBLE_FRACTION of the remaining viewport height -- so a section
+// is roughly 80% "into" view before it's marked active, rather than
+// flipping the instant its very top pixel clears the title. The last
+// section (in reading order) whose top has been scrolled past that line is
+// the "current" one. Before any scrolling (or on any other page), nothing
+// has been passed yet, so it falls back to the first entry (R&Rs), which
+// is the desired initial state.
+var sectionOrder = ['rr', 'pub', 'wp'];
+var sectionUpdateQueued = false;
+var SECTION_VISIBLE_FRACTION = 0.8;
+
+function getStickyTitleBottom() {
+  var stickyTitle = document.querySelector('#research .sticky_title');
+  return stickyTitle ? stickyTitle.getBoundingClientRect().bottom : null;
+}
+
+function updateActiveSection() {
+  sectionUpdateQueued = false;
+  var stickyBottom = getStickyTitleBottom();
+  if (stickyBottom === null) { return; }
+
+  var contentHeight = window.innerHeight - stickyBottom;
+  var line = stickyBottom + (1 - SECTION_VISIBLE_FRACTION) * contentHeight;
+  var current = sectionOrder[0];
+
+  sectionOrder.forEach(function (id) {
+    var section = document.getElementById(id);
+    if (section && section.getBoundingClientRect().top <= line) {
+      current = id;
+    }
+  });
+
+  sectionOrder.forEach(function (id) {
+    var label = document.getElementById(id + '_hl');
+    if (label) { label.classList.toggle('active', id === current); }
+  });
+}
+
+function queueActiveSectionUpdate() {
+  if (!sectionUpdateQueued) {
+    sectionUpdateQueued = true;
+    window.requestAnimationFrame(updateActiveSection);
+  }
+}
+
+// Clicking a section label jumps straight to that section, aligning its
+// top with the sticky title's current bottom edge -- the same place it
+// would land if you'd scrolled there by hand.
+function scrollToSection(id) {
+  var section = document.getElementById(id);
+  var stickyBottom = getStickyTitleBottom();
+  if (!section || stickyBottom === null) { return; }
+  var targetY = window.scrollY + section.getBoundingClientRect().top - stickyBottom;
+  window.scrollTo({ top: targetY, behavior: 'smooth' });
 }
 
 
@@ -350,6 +410,19 @@ init = function() {
 
   let but = createAuthorButton('Payró, Fernando')
   document.getElementById('fer').append(but)
+
+  window.addEventListener('scroll', queueActiveSectionUpdate, { passive: true });
+  window.addEventListener('resize', queueActiveSectionUpdate);
+  updateActiveSection();
+
+  sectionOrder.forEach(function (id) {
+    var label = document.getElementById(id + '_hl');
+    if (label) {
+      label.addEventListener('click', function () {
+        scrollToSection(id);
+      });
+    }
+  });
 
   absElements.forEach(function(absElement) {
     absElement.addEventListener('click', function(e) {
