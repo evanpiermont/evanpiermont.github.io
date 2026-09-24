@@ -494,6 +494,10 @@ a.social:hover{
     padding-top: 0px;
 }
     
+    .bib_button{
+        display: none;
+    }
+    
     .filter_button{
         display: none;
     }
