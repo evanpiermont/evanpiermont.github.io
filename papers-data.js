@@ -145,7 +145,7 @@ var papers = [
     url: `https://arxiv.org/pdf/2106.15979.pdf`,
     abs: `This paper provides a model to analyze and identify a decision maker’s hypothetical reasoning.  Using this model, I show that a DM’s propensity to engage in hypo-thetical thinking is captured exactly by her ability to recognize implications (i.e., toidentify that one hypothesis implies another) and that this later relation is capturedby a DM’s observable behavior.  Thus, this characterization both provides a concretedefinition of (flawed) hypothetical reasoning and, importantly, yields a methodologyto identify these judgments from standard economic data.`,
     slides: `pdfs/HEU.pdf`,
-    supp: `pdfs/HEU_supp.pdf`,
+    supp: `pdfs/HT_supp.pdf`,
     kw: ['axioms', 'language'],
     lean: `https://raw.githubusercontent.com/evanpiermont/proofs/refs/heads/main/Proofs/HEU.lean`,
  },
